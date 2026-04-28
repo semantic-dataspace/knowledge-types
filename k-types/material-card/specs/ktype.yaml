@@ -1,0 +1,69 @@
+format_version: "0.1"
+$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/material-card/specs/ktype.yaml"
+
+id: material-card
+version: "1.0.0"
+
+name: "Material Card"
+description: >
+  A structured summary of a material's properties, combining identity,
+  chemical composition, mechanical characterisation results, and provenance
+  in a single record. Acts as a cross-schema template: it orchestrates
+  multiple semantic schemas and links to the material and characterisation
+  k-items that contributed data.
+
+synonyms:
+  - "material data sheet"
+  - "material passport"
+
+ontology_classes:
+  - iri: "https://w3id.org/pmd/co/Material"
+    label: "Material"
+    ontology: PMDCo
+
+semantic_schemas:
+  - id: "material-card/mechanical/PMDCo"
+    version: "1.0.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/main/schemas/material-card/mechanical/PMDCo/"
+    role: material_card_template
+  - id: "workflow/PMDCo"
+    version: "1.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v1.1.0/schemas/workflow/PMDCo/"
+    role: workflow_record
+  - id: "specimen/PMDCo"
+    version: "1.0.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/main/schemas/specimen/PMDCo/"
+    role: specimen_description
+  - id: "chemical-composition/PMDCo"
+    version: "1.0.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/main/schemas/chemical-composition/PMDCo/"
+    role: composition_record
+
+relations:
+  - id: describes_material
+    label: "Describes material"
+    description: "Material whose properties are summarised in this card."
+    iri: "http://purl.org/dc/terms/subject"
+    target_k_types: [material]
+    cardinality: "1..1"
+    required: true
+  - id: includes_characterization
+    label: "Includes characterisation"
+    description: "Characterisation process k-items that contributed data to this card."
+    iri: "http://purl.org/dc/terms/references"
+    target_k_types: [characterization-process, tensile-test]
+    cardinality: "0..n"
+    required: false
+  - id: includes_composition
+    label: "Includes composition"
+    description: "Chemical composition record used in this card."
+    iri: "https://w3id.org/pmd/co/hasComposition"
+    target_k_types: [chemical-composition]
+    cardinality: "0..1"
+    required: false
+
+kv_properties:
+  enabled: true
+  semantic_mapping: true
+
+tags: [material, data, material-card]

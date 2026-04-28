@@ -1,0 +1,23 @@
+# Example k-item of type: characterization-process
+# Shows a tensile test experiment record before subtyping.
+
+k_type: characterization-process
+
+# Custom properties (inherited from process)
+identifier: "TT-DP800-2026-001"
+description: "Quasi-static uniaxial tensile test on DP800 flat specimen, rolling direction 0°."
+start_time: "2026-03-14T09:00:00Z"
+end_time: "2026-03-14T09:45:00Z"
+
+# Relations (referenced by k-item URI)
+has_operator:
+  - "https://dsms.example.org/k-items/expert-jane-doe"
+
+uses_instrument:
+  - "https://dsms.example.org/k-items/device-zwick-z100"
+
+has_specimen:
+  - "https://dsms.example.org/k-items/specimen-dp800-fz-s1q"
+
+has_dataset:
+  - "https://dsms.example.org/k-items/dataset-tt-dp800-2026-001-raw"

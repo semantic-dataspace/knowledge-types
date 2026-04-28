@@ -1,0 +1,57 @@
+format_version: "0.1"
+$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/dataset/specs/ktype.yaml"
+
+id: dataset
+version: "1.0.0"
+
+name: "Dataset"
+description: >
+  A collection of data, typically produced by a measurement, simulation, or
+  data processing pipeline. Datasets are the primary container for raw and
+  processed experimental or computational data files.
+
+synonyms:
+  - "data file"
+  - "measurement data"
+
+ontology_classes:
+  - iri: "http://www.w3.org/ns/dcat#Dataset"
+    label: "Dataset"
+    ontology: DCAT
+
+kv_properties:
+  enabled: true
+  semantic_mapping: true
+
+custom_properties:
+  semantics_enabled: true
+  sections_enabled: false
+  sections:
+    - id: section-dataset-info
+      name: "Dataset Information"
+      inputs:
+        - id: input-dataset-description
+          label: "Description"
+          widget: Textarea
+          required: false
+          relation_mapping:
+            iri: "http://purl.org/dc/terms/description"
+            type: data_property
+        - id: input-dataset-license
+          label: "License"
+          widget: Text
+          required: false
+          hint: "e.g. CC-BY-4.0, MIT"
+          relation_mapping:
+            iri: "http://purl.org/dc/terms/license"
+            type: data_property
+        - id: input-dataset-format
+          label: "Format"
+          widget: Text
+          required: false
+          hint: "e.g. CSV, HDF5, JSON"
+          relation_mapping:
+            iri: "http://purl.org/dc/terms/format"
+            type: data_property
+
+tags: [data, dataset]

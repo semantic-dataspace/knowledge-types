@@ -1,0 +1,74 @@
+format_version: "0.1"
+$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/organization/specs/ktype.yaml"
+
+id: organization
+version: "1.0.0"
+
+name: "Organization"
+description: >
+  An institution, company, department, or other formal group of people.
+  Can be nested: a department is a sub-organisation of a university.
+
+synonyms:
+  - "organisation"
+  - "institution"
+  - "company"
+
+ontology_classes:
+  - iri: "http://www.w3.org/ns/org#Organization"
+    label: "Organization"
+    ontology: W3C-ORG
+  - iri: "http://xmlns.com/foaf/0.1/Organization"
+    label: "Organization"
+    ontology: FOAF
+  - iri: "https://schema.org/Organization"
+    label: "Organization"
+    ontology: schema.org
+
+relations:
+  - id: sub_organization_of
+    label: "Sub-organisation of"
+    description: "Parent organisation this organisation belongs to."
+    iri: "http://www.w3.org/ns/org#subOrganizationOf"
+    target_k_types: [organization]
+    cardinality: "0..1"
+    required: false
+
+custom_properties:
+  semantics_enabled: true
+  sections_enabled: false
+  sections:
+    - id: section-org-info
+      name: "Organisation Information"
+      inputs:
+        - id: input-org-name
+          label: "Name of the Organisation"
+          widget: Text
+          required: true
+          relation_mapping:
+            iri: "http://xmlns.com/foaf/0.1/name"
+            type: data_property
+        - id: input-org-url
+          label: "URL of the webpage"
+          widget: Text
+          required: false
+          relation_mapping:
+            iri: "http://www.w3.org/ns/dcat#accessURL"
+            type: data_property
+        - id: input-org-city
+          label: "City"
+          widget: Text
+          required: false
+          relation_mapping:
+            iri: "http://www.w3.org/ns/org#location"
+            type: data_property
+        - id: input-org-ror
+          label: "ROR ID"
+          widget: Text
+          required: false
+          hint: "Research Organisation Registry identifier, e.g. 04aj4c181"
+          relation_mapping:
+            iri: "https://schema.org/identifier"
+            type: data_property
+
+tags: [agent, organization]

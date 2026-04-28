@@ -1,0 +1,40 @@
+extends: default
+
+rules:
+
+  # k-type specs contain long IRI strings and URLs in `url:` fields.
+  line-length:
+    max: 120
+    allow-non-breakable-words: true
+    allow-non-breakable-inline-mappings: true
+
+  # Enforce consistent 2-space indentation.
+  indentation:
+    spaces: 2
+    indent-sequences: true
+    check-multi-line-strings: false
+
+  # Require two spaces before inline comments.
+  comments:
+    min-spaces-from-content: 2
+
+  # Disable block comment indentation checks.
+  # Section-divider comments intentionally appear at varying depths.
+  comments-indentation: disable
+
+  # Disallow bare `yes`/`no`/`on`/`off`; use `true`/`false` explicitly.
+  truthy:
+    allowed-values: ['true', 'false']
+    check-keys: false
+
+  # Allow files without a leading `---` document separator.
+  document-start: disable
+
+  # Do not enforce a specific quoting style.
+  quoted-strings: disable
+
+  # Allow blank lines between sections for readability.
+  empty-lines:
+    max: 2
+    max-start: 0
+    max-end: 1

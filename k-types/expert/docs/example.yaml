@@ -1,0 +1,22 @@
+# Example k-item of type: expert
+# This shows what a filled-in expert record looks like.
+
+k_type: expert
+
+# Custom properties
+first_name: "Jane"
+last_name: "Doe"
+email: "jane.doe@example.org"
+orcid: "0000-0002-1234-5678"
+field_of_study: "Materials Science and Engineering"
+
+# Relations (referenced by k-item URI)
+employer:
+  - "https://dsms.example.org/k-items/org-iwm-fraunhofer"
+department:
+  - "https://dsms.example.org/k-items/org-iwm-dept-modelling"
+expertise_in_material:
+  - "https://dsms.example.org/k-items/material-dp800"
+  - "https://dsms.example.org/k-items/material-aa6016"
+expertise_in_device:
+  - "https://dsms.example.org/k-items/device-zwick-z100"

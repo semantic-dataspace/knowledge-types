@@ -1,0 +1,70 @@
+format_version: "0.1"
+$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/document/specs/ktype.yaml"
+
+id: document
+version: "1.0.0"
+
+name: "Document"
+description: >
+  A written or electronic document such as a publication, report, standard,
+  or data management plan. Use this k-type when the primary artefact is a
+  human-readable text rather than a dataset.
+
+synonyms:
+  - "publication"
+  - "report"
+  - "paper"
+
+ontology_classes:
+  - iri: "http://purl.org/dc/terms/Text"
+    label: "Text"
+    ontology: DCTERMS
+  - iri: "https://schema.org/DigitalDocument"
+    label: "Digital Document"
+    ontology: schema.org
+
+custom_properties:
+  semantics_enabled: true
+  sections_enabled: false
+  sections:
+    - id: section-document-info
+      name: "Document Information"
+      inputs:
+        - id: input-doc-title
+          label: "Title"
+          widget: Text
+          required: false
+          relation_mapping:
+            iri: "http://purl.org/dc/terms/title"
+            type: data_property
+        - id: input-doc-authors
+          label: "Authors"
+          widget: Text
+          required: false
+          relation_mapping:
+            iri: "http://purl.org/dc/terms/creator"
+            type: data_property
+        - id: input-doc-doi
+          label: "DOI"
+          widget: Text
+          required: false
+          hint: "e.g. 10.1002/adem.202401448"
+          relation_mapping:
+            iri: "http://purl.org/dc/terms/identifier"
+            type: data_property
+        - id: input-doc-year
+          label: "Year"
+          widget: Number
+          required: false
+          relation_mapping:
+            iri: "http://purl.org/dc/terms/date"
+            type: data_property
+        - id: input-doc-abstract
+          label: "Abstract"
+          widget: Textarea
+          required: false
+          relation_mapping:
+            iri: "http://purl.org/dc/terms/abstract"
+            type: data_property
+
+tags: [data, document]

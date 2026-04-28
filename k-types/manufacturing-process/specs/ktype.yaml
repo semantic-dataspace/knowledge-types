@@ -1,0 +1,89 @@
+format_version: "0.1"
+$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/manufacturing-process/specs/ktype.yaml"
+
+id: manufacturing-process
+version: "1.0.0"
+
+name: "Manufacturing Process"
+description: >
+  A process that transforms, shapes, or produces a material or component.
+  Examples: cold rolling, heat treatment, casting, additive manufacturing.
+  Extend this k-type for specific manufacturing operations.
+
+synonyms:
+  - "production process"
+  - "forming process"
+
+extends: ../process/specs/ktype.yaml
+
+ontology_classes:
+  - iri: "https://w3id.org/pmd/co/ManufacturingProcess"
+    label: "Manufacturing Process"
+    ontology: PMDCo
+
+semantic_schemas:
+  - id: "manufacturing/step/base/PMDCo"
+    version: "2.0.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v2.0.0/schemas/manufacturing/step/base/PMDCo/"
+    role: process_step
+
+relations:
+  - id: has_operator
+    label: "Operator"
+    description: "Expert who performed or supervised this process."
+    iri: "https://w3id.org/steel/ProcessOntology/hasOperator"
+    target_k_types: [expert]
+    cardinality: "0..n"
+    required: false
+  - id: has_input
+    label: "Input material"
+    description: "Material or semi-finished product fed into this process."
+    iri: "https://w3id.org/ORCHESTER/HasInput"
+    target_k_types: [material, specimen]
+    cardinality: "0..n"
+    required: false
+  - id: has_output
+    label: "Output material"
+    description: "Material or component produced by this process."
+    iri: "https://w3id.org/ORCHESTER/HasOutput"
+    target_k_types: [material, specimen]
+    cardinality: "0..n"
+    required: false
+  - id: has_dataset
+    label: "Process data"
+    description: "Dataset containing process parameters or monitoring data."
+    iri: "https://w3id.org/steel/ProcessOntology/parameters"
+    target_k_types: [dataset]
+    cardinality: "0..n"
+    required: false
+
+custom_properties:
+  semantics_enabled: true
+  sections_enabled: true
+  sections:
+    - id: section-mfg-params
+      name: "Process Parameters"
+      inputs:
+        - id: input-mfg-duration
+          label: "Process duration"
+          widget: Number
+          required: false
+          measurement_unit:
+            iri: "http://qudt.org/vocab/unit/SEC"
+            label: "Second"
+            symbol: "s"
+            namespace: qudt
+          relation_mapping:
+            iri: "https://w3id.org/steel/ProcessOntology/hasTime_Object"
+            type: data_property
+        - id: input-mfg-temperature
+          label: "Temperature"
+          widget: Number
+          required: false
+          measurement_unit:
+            iri: "http://qudt.org/vocab/unit/DEG_C"
+            label: "Degree Celsius"
+            symbol: "°C"
+            namespace: qudt
+
+tags: [process, manufacturing]

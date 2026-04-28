@@ -1,0 +1,58 @@
+format_version: "0.1"
+$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/person/specs/ktype.yaml"
+
+id: person
+version: "1.0.0"
+
+name: "Person"
+description: >
+  A human individual. Base k-type for all person-like concepts.
+  Extend this k-type rather than using it directly where a more
+  specific type (e.g. expert) applies.
+
+ontology_classes:
+  - iri: "http://xmlns.com/foaf/0.1/Person"
+    label: "Person"
+    ontology: FOAF
+  - iri: "https://schema.org/Person"
+    label: "Person"
+    ontology: schema.org
+
+custom_properties:
+  semantics_enabled: true
+  sections_enabled: false
+  sections:
+    - id: section-person-identity
+      name: "Identity"
+      inputs:
+        - id: input-first-name
+          label: "First Name"
+          widget: Text
+          required: false
+          relation_mapping:
+            iri: "http://xmlns.com/foaf/0.1/firstName"
+            type: data_property
+        - id: input-last-name
+          label: "Last Name"
+          widget: Text
+          required: false
+          relation_mapping:
+            iri: "http://xmlns.com/foaf/0.1/lastName"
+            type: data_property
+        - id: input-email
+          label: "Email"
+          widget: Text
+          required: false
+          relation_mapping:
+            iri: "http://xmlns.com/foaf/0.1/mbox"
+            type: data_property
+        - id: input-orcid
+          label: "ORCID"
+          widget: Text
+          required: false
+          hint: "e.g. 0000-0000-0000-0000"
+          relation_mapping:
+            iri: "http://www.w3.org/ns/org#identifier"
+            type: data_property
+
+tags: [agent, person]

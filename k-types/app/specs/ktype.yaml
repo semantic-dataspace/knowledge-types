@@ -1,0 +1,55 @@
+format_version: "0.1"
+$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/app/specs/ktype.yaml"
+
+id: app
+version: "1.0.0"
+
+name: "App"
+description: >
+  A software application or executable tool available within the DSMS,
+  such as a data conversion pipeline, analysis notebook, or simulation wrapper.
+
+synonyms:
+  - "application"
+  - "tool"
+  - "executable"
+
+ontology_classes:
+  - iri: "https://schema.org/SoftwareApplication"
+    label: "Software Application"
+    ontology: schema.org
+
+custom_properties:
+  semantics_enabled: true
+  sections_enabled: false
+  sections:
+    - id: section-app-info
+      name: "Application Information"
+      inputs:
+        - id: input-app-type
+          label: "Type of application"
+          widget: Multi-select
+          required: false
+          select_options:
+            - label: "Data conversion"
+              value: "data_conversion"
+            - label: "Data analysis"
+              value: "data_analysis"
+            - label: "Simulation"
+              value: "simulation"
+            - label: "Visualisation"
+              value: "visualisation"
+            - label: "Other"
+              value: "other"
+          relation_mapping:
+            iri: "https://w3id.org/ORCHESTER/HasApplicationType"
+            type: data_property
+        - id: input-app-description
+          label: "Description"
+          widget: Textarea
+          required: false
+          relation_mapping:
+            iri: "http://purl.org/dc/terms/description"
+            type: data_property
+
+tags: [software, app]

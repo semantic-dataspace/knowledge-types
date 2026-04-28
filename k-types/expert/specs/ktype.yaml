@@ -1,0 +1,84 @@
+format_version: "0.1"
+$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/expert/specs/ktype.yaml"
+
+id: expert
+version: "1.0.0"
+
+name: "Expert"
+description: >
+  A person with domain expertise, such as a researcher, engineer, or technician.
+  Experts can be linked to processes as operators and to materials and devices
+  as subject-matter experts.
+
+synonyms:
+  - "researcher"
+  - "engineer"
+  - "technician"
+  - "scientist"
+
+extends: ../person/specs/ktype.yaml
+
+ontology_classes:
+  - iri: "https://w3id.org/emmo#EMMO_27c5d8c6_8af7_4d63_beb1_ec37cd8b3fa3"
+    label: "Expert"
+    ontology: EMMO
+
+semantic_schemas:
+  - id: "expertise/schema.org"
+    version: "1.0.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v1.0.0/schemas/expertise/schema.org/"
+    role: expertise_profile
+
+relations:
+  - id: employer
+    label: "Employer"
+    description: "Organisation that employs this expert."
+    iri: "https://d-nb.info/standards/elementset/agrelon#hasEmployer"
+    target_k_types: [organization]
+    cardinality: "0..n"
+    required: false
+  - id: department
+    label: "Department"
+    description: "Organisational unit within the employer."
+    iri: "http://www.w3.org/ns/org#memberOf"
+    target_k_types: [organization]
+    cardinality: "0..n"
+    required: false
+  - id: knows
+    label: "Knows"
+    description: "Other experts this person knows professionally."
+    iri: "http://xmlns.com/foaf/0.1/knows"
+    target_k_types: [expert]
+    cardinality: "0..n"
+    required: false
+  - id: expertise_in_material
+    label: "Expertise in material"
+    description: "Materials this expert has expertise in."
+    iri: "https://d-nb.info/standards/elementset/gnd#topic"
+    target_k_types: [material]
+    cardinality: "0..n"
+    required: false
+  - id: expertise_in_device
+    label: "Expertise in measurement device"
+    description: "Measurement devices this expert is qualified to operate."
+    iri: "https://w3id.org/ORCHESTER/measurement-device/HasMeasurementDeviceName"
+    target_k_types: [measurement-device]
+    cardinality: "0..n"
+    required: false
+
+custom_properties:
+  semantics_enabled: true
+  sections_enabled: true
+  sections:
+    - id: section-expert-expertise
+      name: "Expertise"
+      inputs:
+        - id: input-field-of-study
+          label: "Education or Field of Study"
+          widget: Text
+          required: false
+          relation_mapping:
+            iri: "https://d-nb.info/standards/elementset/gnd#fieldOfStudy"
+            type: data_property
+
+tags: [agent, person, expert]

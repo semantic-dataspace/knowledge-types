@@ -1,0 +1,41 @@
+format_version: "0.1"
+$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/chemical-composition/specs/ktype.yaml"
+
+id: chemical-composition
+version: "1.0.0"
+
+name: "Chemical Composition"
+description: >
+  The elemental or molecular composition of a material, expressed as mass
+  fractions or atomic percentages per element. Backed by a semantic schema
+  that produces RDF triples for each element fraction.
+
+synonyms:
+  - "elemental composition"
+  - "alloy composition"
+
+ontology_classes:
+  - iri: "https://w3id.org/pmd/co/ChemicalComposition"
+    label: "Chemical Composition"
+    ontology: PMDCo
+
+semantic_schemas:
+  - id: "chemical-composition/PMDCo"
+    version: "1.0.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/main/schemas/chemical-composition/PMDCo/"
+    role: composition_record
+  - id: "chemical-composition/BWMD"
+    version: "1.0.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/main/schemas/chemical-composition/BWMD/"
+    role: composition_record
+
+relations:
+  - id: composition_of
+    label: "Composition of"
+    description: "Material whose elemental composition this record describes."
+    iri: "https://w3id.org/pmd/co/qualityOf"
+    target_k_types: [material, specimen]
+    cardinality: "0..1"
+    required: false
+
+tags: [material, composition]

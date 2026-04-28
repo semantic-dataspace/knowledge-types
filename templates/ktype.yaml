@@ -1,0 +1,118 @@
+# ─────────────────────────────────────────────────────────────────
+# Knowledge Type Specification  |  format_version: "0.1"
+#
+# Copy this file into k-types/<your-id>/specs/ktype.yaml,
+# fill in the fields, and submit a pull request.
+# See docs/2_format.md for a field-by-field reference.
+# ─────────────────────────────────────────────────────────────────
+
+format_version: "0.1"
+
+# Canonical URL of this file. Use the main-branch URL during development;
+# replace with a pinned tag URL at release time.
+$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/<your-id>/specs/ktype.yaml"
+
+# ── Identity ──────────────────────────────────────────────────────
+
+id: <your-id>       # kebab-case; unique across all k-types
+version: "1.0.0"    # semver: MAJOR.MINOR.PATCH
+
+# Simple string or multilingual map:
+#   name: "Tensile Test"
+#   name:
+#     en: "Tensile Test"
+#     de: "Zugversuch"
+name: "<Name>"
+
+description: "<One to three sentences describing what this k-type represents.>"
+
+# Optional: alternative names (flat list or same multilingual map as name)
+# synonyms:
+#   - "alternative name"
+
+# ── Inheritance ───────────────────────────────────────────────────
+# Single parent (relative path during development, $id URL when published):
+#   extends: ../process/specs/ktype.yaml
+#
+# Multiple parents:
+#   extends:
+#     - ../process/specs/ktype.yaml
+#     - ../material/specs/ktype.yaml
+#
+# Omit this field entirely if this k-type has no parent.
+
+# extends: null
+
+# ── Ontology class mappings ───────────────────────────────────────
+# Used when representing k-items of this type in a knowledge graph.
+# Child k-types inherit and extend the parent's ontology_classes.
+
+ontology_classes:
+  - iri: "<class IRI>"
+    label: "<human-readable label>"
+    ontology: "<ontology name>"   # e.g. PMDCo, schema.org, EMMO, OBI
+
+# ── Semantic schemas ──────────────────────────────────────────────
+# References to semantic-schemas with pinned versions.
+# `role` is optional but helps consumers understand how the schema is used.
+
+# semantic_schemas:
+#   - id: "characterization/process/PMDCo"
+#     version: "1.0.0"
+#     url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v1.0.0/schemas/characterization/process/PMDCo/"
+#     role: process_step
+
+# ── Relations to other k-types ────────────────────────────────────
+# Declares the typed links that k-items of this type can have to
+# k-items of other k-types. Inherited from parent k-types.
+
+# relations:
+#   - id: has_operator
+#     label: "Operator"
+#     description: "Expert who performed this process."
+#     iri: "http://www.w3.org/ns/prov#wasAssociatedWith"
+#     target_k_types: [expert]
+#     cardinality: "0..n"   # "0..1" | "1..1" | "0..n" | "1..n"
+#     required: false
+
+# ── Custom properties ─────────────────────────────────────────────
+# Webform shown to users when creating or editing a k-item.
+# Sections and inputs from parent k-types are merged in by id.
+
+# custom_properties:
+#   semantics_enabled: true
+#   sections_enabled: true
+#   sections:
+#     - id: section-general
+#       name: "General Information"
+#       inputs:
+#         - id: input-name
+#           label: "Name"
+#           widget: Text        # Text | Number | Textarea | Date | Datetime |
+#                               # Checkbox | Select | Multi-select | Slider |
+#                               # File | Knowledge item | Array group
+#           required: false
+#           relation_mapping:
+#             iri: "http://xmlns.com/foaf/0.1/name"
+#             type: data_property   # data_property | object_property
+
+# ── Dynamic key-value properties ──────────────────────────────────
+# Allows free-form key-value annotations on k-items of this type.
+# semantic_mapping: true lets each entry carry an arbitrary ontology IRI.
+
+# kv_properties:
+#   enabled: true
+#   semantic_mapping: true
+
+# ── Tags ──────────────────────────────────────────────────────────
+# Free-form labels used for filtering and discovery in the catalog.
+
+tags: []
+
+# ── Legacy process schemas ────────────────────────────────────────
+# Retained for backwards compatibility. Leave empty unless migrating
+# an existing k-type from the knowledge-type service.
+
+# process_schemas:
+#   - name: "<schema name>"
+#     spec: []

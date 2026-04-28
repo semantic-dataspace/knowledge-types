@@ -1,0 +1,61 @@
+format_version: "0.1"
+$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/material/specs/ktype.yaml"
+
+id: material
+version: "1.0.0"
+
+name: "Material"
+description: >
+  A physical substance or engineered material. Base k-type for all material-like
+  concepts. Extend this k-type for more specific material classes (e.g. specimen,
+  chemical composition, alloy).
+
+synonyms:
+  - "substance"
+  - "raw material"
+  - "engineered material"
+
+ontology_classes:
+  - iri: "https://w3id.org/pmd/co/Material"
+    label: "Material"
+    ontology: PMDCo
+  - iri: "https://w3id.org/emmo#EMMO_4207e895_8b83_4318_996a_72cfb32acd94"
+    label: "Material"
+    ontology: EMMO
+
+kv_properties:
+  enabled: true
+  semantic_mapping: true
+
+custom_properties:
+  semantics_enabled: true
+  sections_enabled: true
+  sections:
+    - id: section-material-identity
+      name: "Material Identity"
+      inputs:
+        - id: input-material-name
+          label: "Material name"
+          widget: Text
+          required: false
+          hint: "e.g. DP800, AA6016, 316L"
+          relation_mapping:
+            iri: "http://xmlns.com/foaf/0.1/name"
+            type: data_property
+        - id: input-material-identifier
+          label: "Material identifier / number"
+          widget: Text
+          required: false
+          hint: "e.g. 1.0038 (EN designation)"
+          relation_mapping:
+            iri: "https://w3id.org/steel/ProcessOntology/hasMaterialIdentifier"
+            type: data_property
+        - id: input-material-description
+          label: "Description"
+          widget: Textarea
+          required: false
+          relation_mapping:
+            iri: "http://purl.org/dc/terms/description"
+            type: data_property
+
+tags: [material]

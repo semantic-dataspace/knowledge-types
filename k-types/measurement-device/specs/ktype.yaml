@@ -1,0 +1,98 @@
+format_version: "0.1"
+$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/measurement-device/specs/ktype.yaml"
+
+id: measurement-device
+version: "1.0.0"
+
+name: "Measurement Device"
+description: >
+  A physical instrument or device used to perform measurements or characterisation
+  experiments. Examples: tensile testing machine, SEM, XRD diffractometer, hardness tester.
+
+synonyms:
+  - "instrument"
+  - "testing machine"
+  - "measurement instrument"
+
+ontology_classes:
+  - iri: "http://purl.obolibrary.org/obo/OBI_0000968"
+    label: "Device"
+    ontology: OBI
+  - iri: "https://w3id.org/pmd/co/MeasuringDevice"
+    label: "Measuring Device"
+    ontology: PMDCo
+
+semantic_schemas:
+  - id: "measurement-device/PMDCo"
+    version: "1.0.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v1.0.0/schemas/measurement-device/PMDCo/"
+    role: device_description
+
+relations:
+  - id: responsible_organization
+    label: "Responsible organisation"
+    description: "Organisation that owns or is responsible for this device."
+    iri: "https://w3id.org/ORCHESTER/measurement-device/HasResponsibleOrganizationUnit"
+    target_k_types: [organization]
+    cardinality: "0..1"
+    required: false
+
+custom_properties:
+  semantics_enabled: true
+  sections_enabled: false
+  sections:
+    - id: section-device-info
+      name: "Device Information"
+      inputs:
+        - id: input-device-name
+          label: "Name of measurement device"
+          widget: Text
+          required: true
+          relation_mapping:
+            iri: "https://w3id.org/ORCHESTER/measurement-device/HasMeasurementDeviceName"
+            type: data_property
+        - id: input-device-manufacturer
+          label: "Manufacturer"
+          widget: Text
+          required: false
+          relation_mapping:
+            iri: "https://w3id.org/ORCHESTER/measurement-device/HasManufacturer"
+            type: data_property
+        - id: input-device-type
+          label: "Device type"
+          widget: Text
+          required: false
+          hint: "e.g. Universal testing machine, SEM, XRD"
+          relation_mapping:
+            iri: "https://w3id.org/ORCHESTER/measurement-device/MeasurementDeviceType"
+            type: data_property
+        - id: input-device-serial
+          label: "Serial number"
+          widget: Text
+          required: false
+          relation_mapping:
+            iri: "https://w3id.org/ORCHESTER/measurement-device/HasSerialNumber"
+            type: data_property
+        - id: input-device-inventory
+          label: "Inventory number"
+          widget: Text
+          required: false
+          relation_mapping:
+            iri: "https://w3id.org/ORCHESTER/measurement-device/HasInventoryNumber"
+            type: data_property
+        - id: input-device-room
+          label: "Room number"
+          widget: Text
+          required: false
+          relation_mapping:
+            iri: "https://w3id.org/ORCHESTER/measurement-device/HasRoomNumber"
+            type: data_property
+        - id: input-device-range
+          label: "Measurement range"
+          widget: Textarea
+          required: false
+          relation_mapping:
+            iri: "https://w3id.org/ORCHESTER/measurement-device/HasMeasurementRange"
+            type: data_property
+
+tags: [equipment, measurement-device]
