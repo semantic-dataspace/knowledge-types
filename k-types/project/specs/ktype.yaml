@@ -1,0 +1,120 @@
+format_version: "0.1"
+$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/project/specs/ktype.yaml"
+
+id: project
+version: "1.1.0"
+
+name: "Project"
+description: >
+  A research or engineering project, such as a funded research initiative,
+  collaborative programme, or industrial R&D project.
+  Experts and organisations can be linked to projects they are or were involved in.
+
+synonyms:
+  - "research project"
+  - "research programme"
+  - "initiative"
+
+ontology_classes:
+  - iri: "http://vivoweb.org/ontology/core#Project"
+    label: "Project"
+    ontology: VIVO
+  - iri: "https://schema.org/ResearchProject"
+    label: "ResearchProject"
+    ontology: schema.org
+
+relations:
+  - id: coordinator
+    label: "Coordinator / PI"
+    description: "Principal investigator or project coordinator."
+    iri: "http://vivoweb.org/ontology/core#pi"
+    target_k_types: [expert]
+    cardinality: "0..1"
+    required: false
+  - id: participants
+    label: "Participants"
+    description: "Researchers and engineers participating in the project."
+    iri: "https://schema.org/participant"
+    target_k_types: [expert]
+    cardinality: "0..n"
+    required: false
+  - id: partner_organizations
+    label: "Partner organisations"
+    description: "Institutions and companies involved in the project."
+    iri: "http://www.w3.org/ns/org#hasMember"
+    target_k_types: [organization]
+    cardinality: "0..n"
+    required: false
+  - id: funder
+    label: "Funder"
+    description: "Organisation that funds the project."
+    iri: "https://schema.org/funder"
+    target_k_types: [organization]
+    cardinality: "0..n"
+    required: false
+  - id: publications
+    label: "Publications"
+    description: "Documents published in the context of this project."
+    iri: "https://schema.org/hasPart"
+    target_k_types: [document]
+    cardinality: "0..n"
+    required: false
+
+custom_properties:
+  semantics_enabled: true
+  sections_enabled: true
+  sections:
+    - id: section-project-info
+      name: "Project"
+      inputs:
+        - id: input-project-url
+          label: "Project homepage"
+          widget: Text
+          required: false
+          hint: "e.g. https://my-project.eu"
+          relation_mapping:
+            iri: "https://schema.org/url"
+            type: data_property
+        - id: input-project-start
+          label: "Start date"
+          widget: Date
+          required: false
+          relation_mapping:
+            iri: "https://schema.org/startDate"
+            type: data_property
+        - id: input-project-end
+          label: "End date"
+          widget: Date
+          required: false
+          relation_mapping:
+            iri: "https://schema.org/endDate"
+            type: data_property
+    - id: section-project-funding
+      name: "Funding"
+      inputs:
+        - id: input-grant-id
+          label: "Grant / project ID"
+          widget: Text
+          required: false
+          hint: "e.g. 101058682 (EC) or 03XP0337A (BMBF)"
+          relation_mapping:
+            iri: "https://schema.org/identifier"
+            type: data_property
+        - id: input-funding-program
+          label: "Funding programme"
+          widget: Text
+          required: false
+          hint: "e.g. Horizon Europe, BMBF, DFG"
+          relation_mapping:
+            iri: "http://purl.org/dc/terms/isPartOf"
+            type: data_property
+        - id: input-funding-call-url
+          label: "Call / programme URL"
+          widget: Text
+          required: false
+          hint: "e.g. https://cordis.europa.eu/project/id/101058682"
+          relation_mapping:
+            iri: "http://www.w3.org/ns/dcat#accessURL"
+            type: data_property
+
+tags: [project, research, programme]
