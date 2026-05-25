@@ -8,15 +8,15 @@ A child k-type IS-A instance of its parent and inherits its definitions.
 ## Basic usage
 
 ```yaml
-# k-types/characterization-process/specs/ktype.yaml
+# k-types/characterization-process/specs/k-type.spec.yaml
 id: characterization-process
-extends: ../process/specs/ktype.yaml
+extends: ../process/specs/k-type.spec.yaml
 ```
 
 ```yaml
-# k-types/tensile-test/specs/ktype.yaml
+# k-types/tensile-test/specs/k-type.spec.yaml
 id: tensile-test
-extends: ../characterization-process/specs/ktype.yaml
+extends: ../characterization-process/specs/k-type.spec.yaml
 ```
 
 This creates a chain: `tensile-test` IS-A `characterization-process` IS-A `process`.
@@ -45,8 +45,8 @@ A k-type can extend more than one parent:
 
 ```yaml
 extends:
-  - ../manufacturing-process/specs/ktype.yaml
-  - ../material-forming/specs/ktype.yaml
+  - ../manufacturing-process/specs/k-type.spec.yaml
+  - ../material-forming/specs/k-type.spec.yaml
 ```
 
 **Merge order**: parents are resolved left-to-right, with later entries taking precedence
@@ -62,13 +62,13 @@ then the child's definition overrides that.
 
 During local development, use a relative path:
 ```yaml
-extends: ../process/specs/ktype.yaml
+extends: ../process/specs/k-type.spec.yaml
 ```
 
 At publish time, tooling replaces relative paths with the parent's `$id` (a pinned GitHub
 URL), making the published spec fully self-contained:
 ```yaml
-extends: "https://github.com/semantic-dataspace/knowledge-types/blob/v1.0.0/k-types/process/specs/ktype.yaml"
+extends: "https://github.com/semantic-dataspace/knowledge-types/blob/v0.1.0/k-types/process/specs/k-type.spec.yaml"
 ```
 
 Both forms are valid in the repository at all times.

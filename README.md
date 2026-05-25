@@ -35,13 +35,13 @@ k-types/
     README.md        ← what this k-type is and how to use it
     CHANGELOG.md     ← version history
     specs/
-      ktype.yaml     ← self-contained specification
+      k-type.spec.yaml     ← self-contained specification
     docs/            ← optional usage examples
 templates/
-  ktype.yaml         ← blank template for new k-type authors
+  k-type.spec.yaml         ← blank template for new k-type authors
 docs/
   1_concepts.md      ← plain-language introduction to k-types, ontologies, and the DSMS
-  2_format.md        ← field-by-field reference for ktype.yaml
+  2_format.md        ← field-by-field reference for k-type.spec.yaml
   3_inheritance.md   ← how inheritance and multiple inheritance work
 CATALOG.md           ← full registry with inheritance and relation graph
 ```
@@ -59,7 +59,7 @@ at a glance; the table below lets you filter by ontology, semantic schema, or ta
 
 1. Check [CATALOG.md](CATALOG.md): does an existing k-type already cover your concept? If so,
    consider extending it with `extends` rather than creating a new one.
-2. Copy [templates/ktype.yaml](templates/ktype.yaml) into a new folder under `k-types/`.
+2. Copy [templates/k-type.spec.yaml](templates/k-type.spec.yaml) into a new folder under `k-types/`.
 3. Read [docs/2_format.md](docs/2_format.md) for a field-by-field reference.
 4. Open a **New K-Type** issue to discuss before submitting a pull request.
 
@@ -70,7 +70,7 @@ at a glance; the table below lets you filter by ontology, semantic schema, or ta
 | Document | Content |
 |---|---|
 | [docs/1_concepts.md](docs/1_concepts.md) | Plain-language introduction: what k-types are, what ontologies and knowledge graphs are, why this matters |
-| [docs/2_format.md](docs/2_format.md) | Field-by-field reference for `ktype.yaml` |
+| [docs/2_format.md](docs/2_format.md) | Field-by-field reference for `k-type.spec.yaml` |
 | [docs/3_inheritance.md](docs/3_inheritance.md) | Inheritance mechanics, multiple inheritance, merge rules |
 
 ---

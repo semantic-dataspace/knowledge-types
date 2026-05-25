@@ -1,8 +1,9 @@
 format_version: "0.1"
-$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/manufacturing-process/specs/ktype.yaml"
+$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/manufacturing-process/specs/k-type.spec.yaml"
 
 id: manufacturing-process
-version: "1.0.0"
+version: "0.1.0"
+maturity: 'draft'
 
 name: "Manufacturing Process"
 description: >
@@ -14,7 +15,7 @@ synonyms:
   - "production process"
   - "forming process"
 
-extends: ../process/specs/ktype.yaml
+extends: ../process/specs/k-type.spec.yaml
 
 ontology_classes:
   - iri: "https://w3id.org/pmd/co/ManufacturingProcess"

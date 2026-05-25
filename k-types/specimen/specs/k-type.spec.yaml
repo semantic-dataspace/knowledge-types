@@ -1,8 +1,9 @@
 format_version: "0.1"
-$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/specimen/specs/ktype.yaml"
+$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/specimen/specs/k-type.spec.yaml"
 
 id: specimen
-version: "1.0.0"
+version: "0.1.0"
+maturity: 'draft'
 
 name: "Specimen"
 description: >
@@ -15,7 +16,7 @@ synonyms:
   - "sample"
   - "coupon"
 
-extends: ../material/specs/ktype.yaml
+extends: ../material/specs/k-type.spec.yaml
 
 ontology_classes:
   - iri: "https://w3id.org/pmd/co/Specimen"

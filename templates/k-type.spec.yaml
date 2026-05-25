@@ -1,7 +1,7 @@
 # ─────────────────────────────────────────────────────────────────
 # Knowledge Type Specification  |  format_version: "0.1"
 #
-# Copy this file into k-types/<your-id>/specs/ktype.yaml,
+# Copy this file into k-types/<your-id>/specs/k-type.spec.yaml,
 # fill in the fields, and submit a pull request.
 # See docs/2_format.md for a field-by-field reference.
 # ─────────────────────────────────────────────────────────────────
@@ -10,12 +10,13 @@ format_version: "0.1"
 
 # Canonical URL of this file. Use the main-branch URL during development;
 # replace with a pinned tag URL at release time.
-$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/<your-id>/specs/ktype.yaml"
+$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/<your-id>/specs/k-type.spec.yaml"
 
 # ── Identity ──────────────────────────────────────────────────────
 
 id: <your-id>       # kebab-case; unique across all k-types
-version: "1.0.0"    # semver: MAJOR.MINOR.PATCH
+version: "0.1.0"    # semver: MAJOR.MINOR.PATCH
+maturity: 'draft'
 
 # Simple string or multilingual map:
 #   name: "Tensile Test"
@@ -32,12 +33,12 @@ description: "<One to three sentences describing what this k-type represents.>"
 
 # ── Inheritance ───────────────────────────────────────────────────
 # Single parent (relative path during development, $id URL when published):
-#   extends: ../process/specs/ktype.yaml
+#   extends: ../process/specs/k-type.spec.yaml
 #
 # Multiple parents:
 #   extends:
-#     - ../process/specs/ktype.yaml
-#     - ../material/specs/ktype.yaml
+#     - ../process/specs/k-type.spec.yaml
+#     - ../material/specs/k-type.spec.yaml
 #
 # Omit this field entirely if this k-type has no parent.
 

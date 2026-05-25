@@ -1,8 +1,9 @@
 format_version: "0.1"
-$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/chemical-composition/specs/ktype.yaml"
+$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/chemical-composition/specs/k-type.spec.yaml"
 
 id: chemical-composition
-version: "1.0.0"
+version: "0.1.0"
+maturity: 'draft'
 
 name: "Chemical Composition"
 description: >

@@ -1,8 +1,9 @@
 format_version: "0.1"
-$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/expert/specs/ktype.yaml"
+$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/expert/specs/k-type.spec.yaml"
 
 id: expert
-version: "1.0.0"
+version: "0.1.0"
+maturity: 'draft'
 
 name: "Expert"
 description: >
@@ -16,7 +17,7 @@ synonyms:
   - "technician"
   - "scientist"
 
-extends: ../person/specs/ktype.yaml
+extends: ../person/specs/k-type.spec.yaml
 
 ontology_classes:
   - iri: "https://w3id.org/emmo#EMMO_27c5d8c6_8af7_4d63_beb1_ec37cd8b3fa3"

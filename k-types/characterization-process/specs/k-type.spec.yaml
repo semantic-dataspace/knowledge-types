@@ -1,8 +1,9 @@
 format_version: "0.1"
-$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/characterization-process/specs/ktype.yaml"
+$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/characterization-process/specs/k-type.spec.yaml"
 
 id: characterization-process
-version: "1.0.0"
+version: "0.1.0"
+maturity: 'draft'
 
 name: "Characterization Process"
 description: >
@@ -16,7 +17,7 @@ synonyms:
   - "measurement process"
   - "experiment"
 
-extends: ../process/specs/ktype.yaml
+extends: ../process/specs/k-type.spec.yaml
 
 ontology_classes:
   - iri: "http://purl.obolibrary.org/obo/OBI_0000070"

@@ -1,19 +1,19 @@
-# Format reference: ktype.yaml
+# Format reference: k-type.spec.yaml
 
 This document describes every field in a k-type specification file.
-For a blank template see [templates/ktype.yaml](../templates/ktype.yaml).
+For a blank template see [templates/k-type.spec.yaml](../templates/k-type.spec.yaml).
 
 ---
 
 ## Top-level fields
 
 ### `format_version`
-**Required.** The version of the ktype.yaml format itself. Current value: `"0.1"`.
+**Required.** The version of the k-type.spec.yaml format itself. Current value: `"0.1"`.
 
 ### `$id`
 **Required.** The canonical URL of this file. During development use the main-branch URL:
 ```
-https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/<id>/specs/ktype.yaml
+https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/<id>/specs/k-type.spec.yaml
 ```
 At release time, replace `main` with the git tag (e.g. `v1.2.0`) so the URL is pinned and
 reproducible.
@@ -28,6 +28,15 @@ change this: it is the key used in `extends` references and in the DSMS database
 - **MAJOR**: breaking changes (renamed or removed fields, changed ontology classes, removed relations).
 - **MINOR**: backwards-compatible additions (new optional fields, new relations, new schemas).
 - **PATCH**: corrections that do not affect structure or semantics (typos, description fixes).
+
+### `maturity`
+**Required.** Readiness level of this specification. One of:
+
+| Value | Meaning |
+|---|---|
+| `draft` | Early design; fields and semantics may still change |
+| `stable` | Finalized; only backwards-compatible changes are accepted |
+| `deprecated` | Replaced by another k-type; retained for compatibility only |
 
 ### `name`
 **Required.** Human-readable name. Either a plain string or a multilingual map:
@@ -62,14 +71,14 @@ synonyms:
 
 Single parent (relative path during development, `$id` URL when published):
 ```yaml
-extends: ../process/specs/ktype.yaml
+extends: ../process/specs/k-type.spec.yaml
 ```
 
 Multiple parents:
 ```yaml
 extends:
-  - ../manufacturing-process/specs/ktype.yaml
-  - ../material-forming/specs/ktype.yaml
+  - ../manufacturing-process/specs/k-type.spec.yaml
+  - ../material-forming/specs/k-type.spec.yaml
 ```
 
 See [docs/3_inheritance.md](3_inheritance.md) for merge rules and cycle detection.

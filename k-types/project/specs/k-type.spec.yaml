@@ -1,8 +1,9 @@
 format_version: "0.1"
-$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/project/specs/ktype.yaml"
+$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/project/specs/k-type.spec.yaml"
 
 id: project
-version: "1.1.0"
+version: "0.2.0"
+maturity: 'draft'
 
 name: "Project"
 description: >
