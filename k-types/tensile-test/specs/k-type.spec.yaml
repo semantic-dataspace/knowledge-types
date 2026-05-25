@@ -28,13 +28,13 @@ ontology_classes:
     ontology: TTO
 
 semantic_schemas:
-  - id: "characterization/step/tensile-test/TTO"
-    version: "3.0.2"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v3.0.2/schemas/characterization/step/tensile-test/TTO/"
+  - id: "characterization/tensile-test/TTO"
+    version: "0.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/characterization/tensile-test/TTO/"
     role: measurement_results
-  - id: "characterization/step/tensile-test/PMDCo"
-    version: "1.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v1.1.0/schemas/characterization/step/tensile-test/PMDCo/"
+  - id: "characterization/tensile-test/PMDCo"
+    version: "0.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/characterization/tensile-test/PMDCo/"
     role: measurement_results
 
 # All relations are inherited from characterization-process:

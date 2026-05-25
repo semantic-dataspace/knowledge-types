@@ -28,8 +28,8 @@ ontology_classes:
 
 semantic_schemas:
   - id: "specimen/PMDCo"
-    version: "1.0.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/main/schemas/specimen/PMDCo/"
+    version: "0.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/specimen/PMDCo/"
     role: specimen_description
 
 relations:

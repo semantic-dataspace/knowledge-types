@@ -25,9 +25,9 @@ ontology_classes:
     ontology: EMMO
 
 semantic_schemas:
-  - id: "expertise/schema.org"
-    version: "1.0.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v1.0.0/schemas/expertise/schema.org/"
+  - id: "expertise/VIVO"
+    version: "0.2.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/expertise/VIVO/"
     role: expertise_profile
 
 relations:

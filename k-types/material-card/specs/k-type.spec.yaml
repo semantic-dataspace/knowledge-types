@@ -24,20 +24,20 @@ ontology_classes:
 
 semantic_schemas:
   - id: "material-card/mechanical/PMDCo"
-    version: "1.0.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/main/schemas/material-card/mechanical/PMDCo/"
+    version: "0.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/material-card/mechanical/PMDCo/"
     role: material_card_template
-  - id: "workflow/PMDCo"
-    version: "1.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v1.1.0/schemas/workflow/PMDCo/"
+  - id: "workflow/OBI"
+    version: "0.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/workflow/OBI/"
     role: workflow_record
   - id: "specimen/PMDCo"
-    version: "1.0.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/main/schemas/specimen/PMDCo/"
+    version: "0.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/specimen/PMDCo/"
     role: specimen_description
   - id: "chemical-composition/PMDCo"
-    version: "1.0.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/main/schemas/chemical-composition/PMDCo/"
+    version: "0.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/chemical-composition/PMDCo/"
     role: composition_record
 
 relations:

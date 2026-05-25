@@ -25,8 +25,8 @@ ontology_classes:
 
 semantic_schemas:
   - id: "measurement-device/PMDCo"
-    version: "1.0.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v1.0.0/schemas/measurement-device/PMDCo/"
+    version: "0.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/measurement-device/PMDCo/"
     role: device_description
 
 relations:

@@ -28,13 +28,9 @@ ontology_classes:
     ontology: PMDCo
 
 semantic_schemas:
-  - id: "characterization/process/PMDCo"
-    version: "1.0.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v1.0.0/schemas/characterization/process/PMDCo/"
-    role: provenance
-  - id: "characterization/step/base/PMDCo"
-    version: "2.0.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v2.0.0/schemas/characterization/step/base/PMDCo/"
+  - id: "characterization/generic/PMDCo"
+    version: "0.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/characterization/generic/PMDCo/"
     role: measurement_step
 
 relations:

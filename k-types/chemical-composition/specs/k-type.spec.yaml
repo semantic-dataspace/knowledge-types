@@ -22,12 +22,12 @@ ontology_classes:
 
 semantic_schemas:
   - id: "chemical-composition/PMDCo"
-    version: "1.0.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/main/schemas/chemical-composition/PMDCo/"
+    version: "0.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/chemical-composition/PMDCo/"
     role: composition_record
   - id: "chemical-composition/BWMD"
-    version: "1.0.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/main/schemas/chemical-composition/BWMD/"
+    version: "0.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/chemical-composition/BWMD/"
     role: composition_record
 
 relations:

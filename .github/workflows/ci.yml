@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pre-commit
+      - run: pre-commit run --all-files
+
+  schema-refs:
+    name: Schema reference checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: knowledge-types
+
+      - uses: actions/checkout@v4
+        with:
+          repository: semantic-dataspace/semantic-schemas
+          path: semantic-schemas
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install test dependencies
+        run: pip install -r tests/requirements.txt
+        working-directory: knowledge-types
+
+      - name: Run schema reference checks
+        run: pytest tests/ -v
+        working-directory: knowledge-types
+        env:
+          SEMANTIC_SCHEMAS_PATH: ${{ github.workspace }}/semantic-schemas
