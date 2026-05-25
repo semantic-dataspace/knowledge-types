@@ -38,6 +38,11 @@ change this: it is the key used in `extends` references and in the DSMS database
 | `stable` | Finalized; only backwards-compatible changes are accepted |
 | `deprecated` | Replaced by another k-type; retained for compatibility only |
 
+### `abstract`
+**Optional.** Set to `true` when this k-type is not intended to be instantiated directly.
+Consumers should hide it from k-item creation UIs and present it only as a base for inheritance.
+Omit the field (or set it to `false`) for normal k-types.
+
 ### `name`
 **Required.** Human-readable name. Either a plain string or a multilingual map:
 ```yaml

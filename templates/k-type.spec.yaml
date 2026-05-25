@@ -17,6 +17,7 @@ $id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/<y
 id: <your-id>       # kebab-case; unique across all k-types
 version: "0.1.0"    # semver: MAJOR.MINOR.PATCH
 maturity: 'draft'
+# abstract: true    # uncomment if this k-type should never be instantiated directly
 
 # Simple string or multilingual map:
 #   name: "Tensile Test"
