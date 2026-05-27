@@ -9,6 +9,14 @@
 3. Add a `README.md` and `CHANGELOG.md` alongside the spec (follow the existing k-types as examples).
 4. Open a **New K-Type** issue to discuss the design before submitting a pull request.
 
+## Updating an existing k-type
+
+Before touching any file, work through
+**[docs/ktype-update-checklist.md](docs/ktype-update-checklist.md)**.
+It lists every file that must change, the order to change them, verification
+commands, and common pitfalls. The checklist is designed to be used by both
+human contributors and LLM agents.
+
 ## Referencing semantic schemas
 
 The `semantic_schemas` field in a spec must stay in sync with the

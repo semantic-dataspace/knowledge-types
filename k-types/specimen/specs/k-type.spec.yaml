@@ -1,8 +1,8 @@
 format_version: "0.1"
-$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/specimen-v0.1.0/k-types/specimen/specs/k-type.spec.yaml"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/specimen-v0.1.1/k-types/specimen/specs/k-type.spec.yaml"
 
 id: specimen
-version: "0.1.0"
+version: "0.1.1"
 maturity: 'draft'
 
 name: "Specimen"
@@ -28,8 +28,8 @@ ontology_classes:
 
 semantic_schemas:
   - id: "specimen/PMDCo"
-    version: "0.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/specimen-PMDCo-v0.1.0/schemas/specimen/PMDCo/specs/schema.oold.yaml"
+    version: "0.2.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/specimen-PMDCo-v0.2.0/schemas/specimen/PMDCo/specs/schema.oold.yaml"
     role: specimen_description
 
 relations:
