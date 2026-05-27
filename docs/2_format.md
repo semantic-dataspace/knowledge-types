@@ -8,21 +8,27 @@ For a blank template see [templates/k-type.spec.yaml](../templates/k-type.spec.y
 ## Top-level fields
 
 ### `format_version`
+
 **Required.** The version of the k-type.spec.yaml format itself. Current value: `"0.1"`.
 
 ### `$id`
+
 **Required.** The canonical URL of this file. During development use the main-branch URL:
-```
+
+```text
 https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/<id>/specs/k-type.spec.yaml
 ```
+
 At release time, replace `main` with the git tag (e.g. `v1.2.0`) so the URL is pinned and
 reproducible.
 
 ### `id`
+
 **Required.** Stable kebab-case identifier, unique across all k-types. Once published, never
 change this: it is the key used in `extends` references and in the DSMS database.
 
 ### `version`
+
 **Required.** Semantic version of this k-type specification (`MAJOR.MINOR.PATCH`).
 
 - **MAJOR**: breaking changes (renamed or removed fields, changed ontology classes, removed relations).
@@ -30,6 +36,7 @@ change this: it is the key used in `extends` references and in the DSMS database
 - **PATCH**: corrections that do not affect structure or semantics (typos, description fixes).
 
 ### `maturity`
+
 **Required.** Readiness level of this specification. One of:
 
 | Value | Meaning |
@@ -39,12 +46,15 @@ change this: it is the key used in `extends` references and in the DSMS database
 | `deprecated` | Replaced by another k-type; retained for compatibility only |
 
 ### `abstract`
+
 **Optional.** Set to `true` when this k-type is not intended to be instantiated directly.
 Consumers should hide it from k-item creation UIs and present it only as a base for inheritance.
 Omit the field (or set it to `false`) for normal k-types.
 
 ### `name`
+
 **Required.** Human-readable name. Either a plain string or a multilingual map:
+
 ```yaml
 name: "Tensile Test"
 # or:
@@ -54,11 +64,14 @@ name:
 ```
 
 ### `description`
+
 **Required.** One to three sentences describing what this k-type represents.
 Same plain string / multilingual map as `name`.
 
 ### `synonyms`
+
 **Optional.** Alternative names. Flat list or multilingual map:
+
 ```yaml
 synonyms:
   - "uniaxial tensile test"
@@ -75,11 +88,13 @@ synonyms:
 **Optional.** Makes this k-type a subtype of one or more parent k-types.
 
 Single parent (relative path during development, `$id` URL when published):
+
 ```yaml
 extends: ../process/specs/k-type.spec.yaml
 ```
 
 Multiple parents:
+
 ```yaml
 extends:
   - ../manufacturing-process/specs/k-type.spec.yaml

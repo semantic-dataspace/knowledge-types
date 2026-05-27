@@ -1,13 +1,20 @@
 # Characterization Process
 
-**Inherits from:** [process](../process/)
-**Ontology:** `obi:Assay`, `pmdco:CharacterisationProcess`, `pmdco:Process` (inherited)
-**Semantic schemas:** `characterization/process/PMDCo` v1.0.0, `characterization/step/base/PMDCo` v2.0.0
-**Links to:** expert (operator, required), measurement-device (instrument, required), specimen / material (specimen, required), dataset (result)
-
 A process that measures or characterises material properties. The central provenance
 k-type for experimental data: it records who ran the experiment, with which device, and
 on which specimen.
+
+<table>
+<tr><td><strong>Version</strong></td><td><code>0.1.0</code></td></tr>
+<tr><td><strong>Inherits from</strong></td><td><a href="../process/">process</a></td></tr>
+<tr><td><strong>Ontology</strong></td><td><code>obi:Assay</code>, <code>pmdco:CharacterisationProcess</code>, <code>pmdco:Process</code> (inherited)</td></tr>
+<tr><td><strong>Semantic schemas</strong></td><td>
+<code>characterization/generic/PMDCo</code> v0.1.0
+</td></tr>
+<tr><td><strong>Links to</strong></td><td>
+expert (operator, required), measurement-device (instrument, required), specimen / material (specimen, required), dataset (result)
+</td></tr>
+</table>
 
 ## What it inherits from process
 

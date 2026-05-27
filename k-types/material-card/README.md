@@ -1,11 +1,20 @@
 # Material Card
 
-**Ontology:** `pmdco:Material`
-**Semantic schemas:** `material-card/mechanical/PMDCo` v1.0.0, `workflow/PMDCo` v1.1.0, `specimen/PMDCo` v1.0.0, `chemical-composition/PMDCo` v1.0.0
-**Links to:** material (required), characterization-process / tensile-test, chemical-composition
-
 A structured summary of a material's properties combining identity, chemical composition,
 mechanical characterisation results, and provenance in one record.
+
+<table>
+<tr><td><strong>Version</strong></td><td><code>0.1.0</code></td></tr>
+<tr><td><strong>Inherits from</strong></td><td>—</td></tr>
+<tr><td><strong>Ontology</strong></td><td><code>pmdco:Material</code></td></tr>
+<tr><td><strong>Semantic schemas</strong></td><td>
+<code>chemical-composition/PMDCo</code> v0.1.0<br>
+<code>material-card/mechanical/PMDCo</code> v0.1.0<br>
+<code>specimen/PMDCo</code> v0.1.0<br>
+<code>workflow/OBI</code> v0.1.0
+</td></tr>
+<tr><td><strong>Links to</strong></td><td>material (required), characterization-process / tensile-test, chemical-composition</td></tr>
+</table>
 
 ## Role in the dataspace
 
@@ -18,7 +27,7 @@ schemas populate the individual sections.
 
 ## Schema composition
 
-```
+```text
 material-card/mechanical/PMDCo     ← top-level template (routes input to sub-schemas)
   ├─ specimen/PMDCo                ← specimen envelope
   ├─ chemical-composition/PMDCo   ← element fractions

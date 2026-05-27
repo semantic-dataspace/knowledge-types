@@ -39,7 +39,7 @@ rationale.
 
 The schema reference checks require a local clone of semantic-schemas as a sibling directory:
 
-```
+```text
 semantic-dataspace/
   knowledge-types/   ← this repo
   semantic-schemas/  ← sibling clone

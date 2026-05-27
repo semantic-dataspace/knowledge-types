@@ -1,9 +1,14 @@
 # Project
 
-**Ontology:** `vivo:Project`, `schema:ResearchProject`
-**Links to:** expert (coordinator, participants), organization (partner organisations, funder), document (publications)
-
 A research or engineering project, such as a funded research initiative, collaborative programme, or industrial R&D project.
+
+<table>
+<tr><td><strong>Version</strong></td><td><code>0.2.0</code></td></tr>
+<tr><td><strong>Inherits from</strong></td><td>—</td></tr>
+<tr><td><strong>Ontology</strong></td><td><code>vivo:Project</code>, <code>schema:ResearchProject</code></td></tr>
+<tr><td><strong>Semantic schemas</strong></td><td>—</td></tr>
+<tr><td><strong>Links to</strong></td><td>expert (coordinator, participants), organization (partner organisations, funder), document (publications)</td></tr>
+</table>
 
 ## What it defines
 

@@ -69,7 +69,7 @@ is a typed connection between two records.
 
 For example, a tensile-test k-item connects to several other k-items:
 
-```
+```text
 [tensile-test: TT-DP800-001]
     --[operator]--> [expert: Jane Doe]
     --[instrument]--> [device: Zwick Z100]

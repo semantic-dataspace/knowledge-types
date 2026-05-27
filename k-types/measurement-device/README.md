@@ -1,11 +1,17 @@
 # Measurement Device
 
-**Ontology:** `obi:Device`, `pmdco:MeasuringDevice`
-**Semantic schemas:** `measurement-device/PMDCo` v1.0.0
-**Links to:** organization (responsible organisation)
-
 A physical instrument used to perform measurements or characterisation experiments.
 Linked to characterisation processes as the instrument used.
+
+<table>
+<tr><td><strong>Version</strong></td><td><code>0.1.0</code></td></tr>
+<tr><td><strong>Inherits from</strong></td><td>—</td></tr>
+<tr><td><strong>Ontology</strong></td><td><code>obi:Device</code>, <code>pmdco:MeasuringDevice</code></td></tr>
+<tr><td><strong>Semantic schemas</strong></td><td>
+<code>measurement-device/PMDCo</code> v0.1.0
+</td></tr>
+<tr><td><strong>Links to</strong></td><td>organization (responsible organisation)</td></tr>
+</table>
 
 ## What it defines
 

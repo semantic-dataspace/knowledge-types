@@ -61,12 +61,14 @@ then the child's definition overrides that.
 ## `extends` resolution
 
 During local development, use a relative path:
+
 ```yaml
 extends: ../process/specs/k-type.spec.yaml
 ```
 
 At publish time, tooling replaces relative paths with the parent's `$id` (a pinned GitHub
 URL), making the published spec fully self-contained:
+
 ```yaml
 extends: "https://github.com/semantic-dataspace/knowledge-types/blob/v0.1.0/k-types/process/specs/k-type.spec.yaml"
 ```

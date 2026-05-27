@@ -9,7 +9,7 @@
 format_version: "0.1"
 
 # Canonical URL of this file, pinned to the per-k-type release tag.
-# Format: https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/<id>-v<version>/k-types/<id>/specs/k-type.spec.yaml
+# See docs/2_format.md for the URL format.
 # Use the main-branch URL during development; update to the tag URL at release time.
 $id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/<your-id>-v0.1.0/k-types/<your-id>/specs/k-type.spec.yaml"
 
@@ -62,7 +62,7 @@ ontology_classes:
 # semantic_schemas:
 #   - id: "characterization/process/PMDCo"
 #     version: "1.0.0"
-#     url: "https://github.com/semantic-dataspace/semantic-schemas/blob/characterization-process-PMDCo-v1.0.0/schemas/characterization/process/PMDCo/specs/schema.oold.yaml"
+#     url: "<github blob URL at per-schema tag>"
 #     role: process_step
 
 # ── Relations to other k-types ────────────────────────────────────
