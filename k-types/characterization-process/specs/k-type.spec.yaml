@@ -1,5 +1,5 @@
 format_version: "0.1"
-$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/characterization-process/specs/k-type.spec.yaml"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/characterization-process-v0.1.0/k-types/characterization-process/specs/k-type.spec.yaml"
 
 id: characterization-process
 version: "0.1.0"
@@ -30,7 +30,7 @@ ontology_classes:
 semantic_schemas:
   - id: "characterization/generic/PMDCo"
     version: "0.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/characterization/generic/PMDCo/"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/characterization-generic-PMDCo-v0.1.0/schemas/characterization/generic/PMDCo/specs/schema.oold.yaml"
     role: measurement_step
 
 relations:

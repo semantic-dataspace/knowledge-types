@@ -1,5 +1,5 @@
 format_version: "0.1"
-$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/material-card/specs/k-type.spec.yaml"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/material-card-v0.1.0/k-types/material-card/specs/k-type.spec.yaml"
 
 id: material-card
 version: "0.1.0"
@@ -25,19 +25,19 @@ ontology_classes:
 semantic_schemas:
   - id: "material-card/mechanical/PMDCo"
     version: "0.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/material-card/mechanical/PMDCo/"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/material-card-mechanical-PMDCo-v0.1.0/schemas/material-card/mechanical/PMDCo/specs/schema.oold.yaml"
     role: material_card_template
   - id: "workflow/OBI"
     version: "0.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/workflow/OBI/"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/workflow-OBI-v0.1.0/schemas/workflow/OBI/specs/schema.oold.yaml"
     role: workflow_record
   - id: "specimen/PMDCo"
     version: "0.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/specimen/PMDCo/"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/specimen-PMDCo-v0.1.0/schemas/specimen/PMDCo/specs/schema.oold.yaml"
     role: specimen_description
   - id: "chemical-composition/PMDCo"
     version: "0.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/chemical-composition/PMDCo/"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/chemical-composition-PMDCo-v0.1.0/schemas/chemical-composition/PMDCo/specs/schema.oold.yaml"
     role: composition_record
 
 relations:

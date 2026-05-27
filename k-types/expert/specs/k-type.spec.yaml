@@ -1,5 +1,5 @@
 format_version: "0.1"
-$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/expert/specs/k-type.spec.yaml"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/expert-v0.1.0/k-types/expert/specs/k-type.spec.yaml"
 
 id: expert
 version: "0.1.0"
@@ -27,7 +27,7 @@ ontology_classes:
 semantic_schemas:
   - id: "expertise/VIVO"
     version: "0.2.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/expertise/VIVO/"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/expertise-VIVO-v0.2.0/schemas/expertise/VIVO/specs/schema.oold.yaml"
     role: expertise_profile
 
 relations:

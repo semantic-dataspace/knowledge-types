@@ -1,5 +1,5 @@
 format_version: "0.1"
-$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/tensile-test/specs/k-type.spec.yaml"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/tensile-test-v0.1.0/k-types/tensile-test/specs/k-type.spec.yaml"
 
 id: tensile-test
 version: "0.1.0"
@@ -29,12 +29,12 @@ ontology_classes:
 
 semantic_schemas:
   - id: "characterization/tensile-test/TTO"
-    version: "0.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/characterization/tensile-test/TTO/"
+    version: "0.1.1"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/tensile-test-TTO-v0.1.1/schemas/characterization/tensile-test/TTO/specs/schema.oold.yaml"
     role: measurement_results
   - id: "characterization/tensile-test/PMDCo"
-    version: "0.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/characterization/tensile-test/PMDCo/"
+    version: "0.2.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/tensile-test-PMDCo-v0.2.0/schemas/characterization/tensile-test/PMDCo/specs/schema.oold.yaml"
     role: measurement_results
 
 # All relations are inherited from characterization-process:

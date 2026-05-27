@@ -1,5 +1,5 @@
 format_version: "0.1"
-$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/process/specs/k-type.spec.yaml"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/process-v0.1.0/k-types/process/specs/k-type.spec.yaml"
 
 id: process
 version: "0.1.0"

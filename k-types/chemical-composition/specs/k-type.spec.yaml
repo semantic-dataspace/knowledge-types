@@ -1,5 +1,5 @@
 format_version: "0.1"
-$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/chemical-composition/specs/k-type.spec.yaml"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/chemical-composition-v0.1.0/k-types/chemical-composition/specs/k-type.spec.yaml"
 
 id: chemical-composition
 version: "0.1.0"
@@ -23,11 +23,11 @@ ontology_classes:
 semantic_schemas:
   - id: "chemical-composition/PMDCo"
     version: "0.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/chemical-composition/PMDCo/"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/chemical-composition-PMDCo-v0.1.0/schemas/chemical-composition/PMDCo/specs/schema.oold.yaml"
     role: composition_record
   - id: "chemical-composition/BWMD"
     version: "0.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/chemical-composition/BWMD/"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/chemical-composition-BWMD-v0.1.0/schemas/chemical-composition/BWMD/specs/schema.oold.yaml"
     role: composition_record
 
 relations:

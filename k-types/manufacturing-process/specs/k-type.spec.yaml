@@ -1,5 +1,5 @@
 format_version: "0.1"
-$id: "https://github.com/semantic-dataspace/knowledge-types/blob/main/k-types/manufacturing-process/specs/k-type.spec.yaml"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/manufacturing-process-v0.1.0/k-types/manufacturing-process/specs/k-type.spec.yaml"
 
 id: manufacturing-process
 version: "0.1.0"
@@ -25,7 +25,7 @@ ontology_classes:
 semantic_schemas:
   - id: "manufacturing/generic/PMDCo"
     version: "0.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v0.7.0/schemas/manufacturing/generic/PMDCo/"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/manufacturing-generic-PMDCo-v0.1.0/schemas/manufacturing/generic/PMDCo/specs/schema.oold.yaml"
     role: process_step
 
 relations:

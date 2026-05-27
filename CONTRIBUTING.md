@@ -19,8 +19,8 @@ are enforced by the CI tests on every pull request:
 - The `version` must match the version recorded in that manifest.
 - The `url` must point to a pinned git tag, not to `main`.
 
-When the semantic-schemas repo releases a new version, bump the affected `version` and `url` fields
-in the relevant k-type specs and update [CATALOG.md](CATALOG.md) to match.
+When a schema releases a new version (new per-schema tag), bump the affected `version` and `url`
+fields in the relevant k-type specs and update [CATALOG.md](CATALOG.md) to match.
 
 ## The maturity field
 

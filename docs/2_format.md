@@ -122,7 +122,7 @@ with pinned versions.
 semantic_schemas:
   - id: "characterization/process/PMDCo"
     version: "1.0.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/v1.0.0/schemas/characterization/process/PMDCo/"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/characterization-process-PMDCo-v1.0.0/schemas/characterization/process/PMDCo/specs/schema.oold.yaml"
     role: provenance
 ```
 
@@ -130,7 +130,7 @@ semantic_schemas:
 |---|---|
 | `id` | Schema path within the semantic-schemas repo |
 | `version` | Pinned semver of the schema |
-| `url` | Full URL to the schema folder at that version |
+| `url` | GitHub tree URL at the per-schema release tag |
 | `role` | Optional: how this schema is used (e.g. `process_step`, `provenance`, `input_material`) |
 
 ---
