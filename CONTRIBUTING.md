@@ -55,6 +55,7 @@ semantic-dataspace/
 
 ```bash
 pip install -r tests/requirements.txt
+pre-commit install
 pytest tests/ -v
 ```
 

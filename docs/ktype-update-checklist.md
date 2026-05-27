@@ -125,9 +125,12 @@ python -c "import yaml; yaml.safe_load(open('k-types/<id>/specs/k-type.spec.yaml
 
 # Schema reference consistency (requires sibling semantic-schemas clone)
 pytest tests/ -v
+
+# Pre-commit hooks (catches README version mismatches and linting)
+pre-commit run --all-files
 ```
 
-All tests must pass before committing.
+All checks must pass before committing.
 
 ---
 
