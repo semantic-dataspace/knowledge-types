@@ -1,15 +1,17 @@
 format_version: "0.1"
-$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/material-v0.1.0/k-types/material/specs/k-type.spec.yaml"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/material-v0.1.1/k-types/material/specs/k-type.spec.yaml"
 
 id: material
-version: "0.1.0"
+version: "0.1.1"
 maturity: 'draft'
 
 name: "Material"
 description: >
-  A physical substance or engineered material. Base k-type for all material-like
-  concepts. Extend this k-type for more specific material classes (e.g. specimen,
-  chemical composition, alloy).
+  The abstract identity of an alloy or substance: its composition, designation,
+  and material-class properties. Use this k-type to represent a material as a
+  concept (e.g. DP800 steel, AA6016 aluminium alloy), not a specific physical
+  piece. For a traceable physical piece use semi-finished-product or one of its
+  subtypes.
 
 synonyms:
   - "substance"

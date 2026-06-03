@@ -3,7 +3,7 @@
 Abstract base k-type for all process-like concepts. Do not use directly; extend it.
 
 <table>
-<tr><td><strong>Version</strong></td><td><code>0.1.0</code></td></tr>
+<tr><td><strong>Version</strong></td><td><code>0.2.0</code></td></tr>
 <tr><td><strong>Inherits from</strong></td><td>—</td></tr>
 <tr><td><strong>Ontology</strong></td><td><code>pmdco:Process</code></td></tr>
 <tr><td><strong>Semantic schemas</strong></td><td>—</td></tr>
@@ -21,3 +21,5 @@ Abstract base k-type for all process-like concepts. Do not use directly; extend 
 
 Custom properties: identifier, description, start time, end time.
 KV properties enabled with semantic mapping for process-specific parameters.
+Context anchor (`context: true`): all process subtypes act as context anchors; k-items
+can be registered as members to scope graph views and queries to a specific process.

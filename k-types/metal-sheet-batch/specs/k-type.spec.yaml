@@ -1,0 +1,44 @@
+format_version: "0.1"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/metal-sheet-batch-v0.1.0/k-types/metal-sheet-batch/specs/k-type.spec.yaml"
+
+id: metal-sheet-batch
+version: "0.1.0"
+maturity: 'draft'
+
+name: "Metal Sheet Batch"
+description: >
+  A delivery or production lot of metal sheets sharing the same alloy identity
+  and supplier. Acts as a context anchor: individual metal-sheet k-items are
+  registered as members to group them by origin and enable batch-level queries.
+
+synonyms:
+  - "sheet delivery"
+  - "sheet lot"
+
+extends: ../batch/specs/k-type.spec.yaml
+
+ontology_classes:
+  - iri: "https://w3id.org/pmd/co/PMD_0020138"
+    label: "Lot"
+    ontology: PMDCo
+
+context_member_types:
+  - metal-sheet
+
+relations:
+  - id: made_of
+    label: "Material"
+    description: "Alloy or substance identity shared by all sheets in this batch."
+    iri: "https://schema.org/material"
+    target_k_types: [material]
+    cardinality: "0..1"
+    required: false
+  - id: supplier
+    label: "Supplier"
+    description: "Organisation that supplied this batch of sheets."
+    iri: "https://schema.org/supplier"
+    target_k_types: [organization]
+    cardinality: "0..1"
+    required: false
+
+tags: [batch, metal-sheet]

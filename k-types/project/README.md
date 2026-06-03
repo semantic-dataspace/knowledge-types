@@ -3,7 +3,7 @@
 A research or engineering project, such as a funded research initiative, collaborative programme, or industrial R&D project.
 
 <table>
-<tr><td><strong>Version</strong></td><td><code>0.2.0</code></td></tr>
+<tr><td><strong>Version</strong></td><td><code>0.3.0</code></td></tr>
 <tr><td><strong>Inherits from</strong></td><td>—</td></tr>
 <tr><td><strong>Ontology</strong></td><td><code>vivo:Project</code>, <code>schema:ResearchProject</code></td></tr>
 <tr><td><strong>Semantic schemas</strong></td><td>—</td></tr>
@@ -32,6 +32,11 @@ A research or engineering project, such as a funded research initiative, collabo
 | Partner organisations | [organization](../organization/) | 0..n | `org:hasMember` |
 | Funder | [organization](../organization/) | 0..n | `schema:funder` |
 | Publications | [document](../document/) | 0..n | `schema:hasPart` |
+
+## Context anchor
+
+`context: true`: project instances act as context anchors; k-items can be registered
+as members to scope graph views and queries to a specific project.
 
 ## Notes
 

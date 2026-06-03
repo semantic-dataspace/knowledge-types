@@ -1,0 +1,51 @@
+format_version: "0.1"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/batch-v0.1.0/k-types/batch/specs/k-type.spec.yaml"
+
+id: batch
+version: "0.1.0"
+maturity: 'draft'
+abstract: true
+context: true
+
+name: "Batch"
+description: >
+  Abstract base k-type for collections of items produced, processed, or received
+  together as a single lot. A batch acts as a context anchor: its members define
+  the scope of the group. Do not use this k-type directly; extend it with a more
+  specific type such as specimen-batch.
+
+ontology_classes:
+  - iri: "http://www.w3.org/ns/prov#Collection"
+    label: "Collection"
+    ontology: W3C PROV
+
+custom_properties:
+  semantics_enabled: true
+  sections_enabled: false
+  sections:
+    - id: section-batch-info
+      name: "Batch Information"
+      inputs:
+        - id: input-batch-id
+          label: "Batch ID"
+          widget: Text
+          required: false
+          relation_mapping:
+            iri: "https://schema.org/identifier"
+            type: data_property
+        - id: input-batch-date
+          label: "Production / receipt date"
+          widget: Date
+          required: false
+          relation_mapping:
+            iri: "https://schema.org/dateCreated"
+            type: data_property
+        - id: input-batch-quantity
+          label: "Quantity"
+          widget: Number
+          required: false
+          relation_mapping:
+            iri: "https://schema.org/numberOfItems"
+            type: data_property
+
+tags: [batch]

@@ -1,5 +1,16 @@
 # Changelog — Process
 
+## [0.2.0] — 2026-06-03
+
+### Added
+
+- `abstract: true` — formalises the existing "do not use directly" documentation into an
+  enforceable spec flag; the knowledge service now blocks direct instantiation.
+- `context: true` — marks all process instances as context anchors; k-items can be
+  registered as members to scope graph views and queries to a specific process.
+
+---
+
 ## [0.1.0] — 2026-04-28
 
 - Initial specification.

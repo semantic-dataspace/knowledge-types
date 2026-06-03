@@ -3,24 +3,35 @@
 A physical test piece prepared from a material for characterisation or mechanical testing.
 
 <table>
-<tr><td><strong>Version</strong></td><td><code>0.1.1</code></td></tr>
-<tr><td><strong>Inherits from</strong></td><td><a href="../material/">material</a></td></tr>
+<tr><td><strong>Version</strong></td><td><code>0.2.0</code></td></tr>
+<tr><td><strong>Inherits from</strong></td><td>—</td></tr>
 <tr><td><strong>Ontology</strong></td><td>
-<code>pmdco:Specimen</code>, <code>obi:Specimen</code>, <code>pmdco:Material</code> (inherited), <code>emmo:Material</code> (inherited)
+<code>pmdco:Specimen</code>, <code>obi:Specimen</code>
 </td></tr>
 <tr><td><strong>Semantic schemas</strong></td><td>
-<code>specimen/PMDCo</code> v0.2.0
+<code>specimen/PMDCo</code> v0.3.0
 </td></tr>
-<tr><td><strong>Links to</strong></td><td>material (manufactured from)</td></tr>
+<tr><td><strong>Links to</strong></td><td>semi-finished-product (source)</td></tr>
 </table>
 
-## What it inherits from material
+## What it defines
 
-Custom properties: name, identifier, description.
-KV properties with semantic mapping.
+Custom properties: type, geometry, width, length, thickness, diameter, description.
 
-## What it adds
+Relations:
 
-- Semantic schema: `specimen/PMDCo` for structured RDF representation.
-- Custom properties: type, geometry, width, length, thickness, diameter, description.
-- Relation: manufactured from (source material).
+| Relation | Target | Cardinality | Predicate |
+|---|---|---|---|
+| Source | [semi-finished-product](../semi-finished-product/) | 0..1 | `prov:wasDerivedFrom` |
+
+The abstract alloy identity is linked via `schema:material` in the `specimen/PMDCo`
+semantic schema (PMDCo duality object/material pattern) rather than as a ktype relation.
+When `source` is set, the UI should offer to auto-populate `schema:material` from
+the source's `made_of` link.
+
+## Subclasses in this library
+
+| K-type | Description |
+|---|---|
+| [flat-specimen](../flat-specimen/) | Flat dog-bone or rectangular test piece |
+| [creep-specimen](../creep-specimen/) | Test piece for creep and stress relaxation testing |

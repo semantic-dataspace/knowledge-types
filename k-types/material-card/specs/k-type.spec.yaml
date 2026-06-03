@@ -1,8 +1,8 @@
 format_version: "0.1"
-$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/material-card-v0.1.1/k-types/material-card/specs/k-type.spec.yaml"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/material-card-v0.1.2/k-types/material-card/specs/k-type.spec.yaml"
 
 id: material-card
-version: "0.1.1"
+version: "0.1.2"
 maturity: 'draft'
 
 name: "Material Card"
@@ -32,8 +32,8 @@ semantic_schemas:
     url: "https://github.com/semantic-dataspace/semantic-schemas/blob/workflow-OBI-v0.1.0/schemas/workflow/OBI/specs/schema.oold.yaml"
     role: workflow_record
   - id: "specimen/PMDCo"
-    version: "0.2.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/specimen-PMDCo-v0.2.0/schemas/specimen/PMDCo/specs/schema.oold.yaml"
+    version: "0.3.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/specimen-PMDCo-v0.3.0/schemas/specimen/PMDCo/specs/schema.oold.yaml"
     role: specimen_description
   - id: "chemical-composition/PMDCo"
     version: "0.1.0"

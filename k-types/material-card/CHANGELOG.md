@@ -1,5 +1,13 @@
 # Changelog — Material Card
 
+## [0.1.2] — 2026-06-03
+
+### Changed
+
+- Bumped `specimen/PMDCo` schema reference to v0.3.0.
+
+---
+
 ## [0.1.1] - 2026-05-27
 
 ### Changed

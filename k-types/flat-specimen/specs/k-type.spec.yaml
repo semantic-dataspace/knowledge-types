@@ -1,0 +1,69 @@
+format_version: "0.1"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/flat-specimen-v0.1.0/k-types/flat-specimen/specs/k-type.spec.yaml"
+
+id: flat-specimen
+version: "0.1.0"
+maturity: 'draft'
+
+name: "Flat Specimen"
+description: >
+  A flat, sheet-type test specimen with a dog-bone or rectangular geometry.
+  Typically prepared from sheet or plate material and used in tensile, fatigue,
+  or bending tests. Inherits basic geometry fields from specimen and adds
+  gauge-section dimensions specific to flat test pieces.
+
+synonyms:
+  - "flat tensile specimen"
+  - "sheet specimen"
+  - "flat bar specimen"
+
+extends: ../specimen/specs/k-type.spec.yaml
+
+custom_properties:
+  semantics_enabled: true
+  sections_enabled: false
+  sections:
+    - id: section-flat-gauge
+      name: "Gauge Section"
+      inputs:
+        - id: input-flat-gauge-length
+          label: "Gauge length"
+          widget: Number
+          required: false
+          hint: "Parallel section length over which strain is measured (L0)"
+          measurement_unit:
+            iri: "http://qudt.org/vocab/unit/MilliM"
+            label: "Millimetre"
+            symbol: "mm"
+            namespace: qudt
+          relation_mapping:
+            iri: "https://w3id.org/steel/ProcessOntology/hasGaugeLengthLo_Object"
+            type: data_property
+        - id: input-flat-gauge-width
+          label: "Gauge width"
+          widget: Number
+          required: false
+          hint: "Width within the parallel gauge section"
+          measurement_unit:
+            iri: "http://qudt.org/vocab/unit/MilliM"
+            label: "Millimetre"
+            symbol: "mm"
+            namespace: qudt
+          relation_mapping:
+            iri: "https://w3id.org/steel/ProcessOntology/hasParallelSectionWidth_Object"
+            type: data_property
+        - id: input-flat-shoulder-radius
+          label: "Shoulder radius"
+          widget: Number
+          required: false
+          hint: "Transition radius between gauge section and grip area"
+          measurement_unit:
+            iri: "http://qudt.org/vocab/unit/MilliM"
+            label: "Millimetre"
+            symbol: "mm"
+            namespace: qudt
+          relation_mapping:
+            iri: "https://w3id.org/steel/ProcessOntology/hasRadius_Object"
+            type: data_property
+
+tags: [specimen, flat-specimen]

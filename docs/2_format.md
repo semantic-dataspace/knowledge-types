@@ -51,6 +51,37 @@ change this: it is the key used in `extends` references and in the DSMS database
 Consumers should hide it from k-item creation UIs and present it only as a base for inheritance.
 Omit the field (or set it to `false`) for normal k-types.
 
+### `context`
+
+**Optional.** Set to `true` to mark this k-type as a *context anchor*, a named scope that
+groups a set of related k-items. A k-item of this type acts as the root of the group: for
+example, a manufacturing process that clusters all specimens, datasets, and devices involved
+in it, or a specimen batch that groups all specimens produced together.
+
+The concept is analogous to an LLM context window: just as a context window scopes which
+knowledge is available to a conversation, a DSMS context scopes which k-items are relevant
+to a specific process, batch, or activity. This makes it natural to use a context as the
+boundary for process-specific queries and AI-assisted analysis.
+
+Inherited by child k-types: if a parent declares `context: true`, all its subtypes are
+implicitly context anchors as well. Omit the field (or set it to `false`) to opt out.
+
+### `context_member_types`
+
+**Optional.** A list of k-type IDs whose instances are the intended members of contexts of
+this type. When a k-item is added to a context whose k-type declares `context_member_types`,
+the system checks whether the member's k-type is in the list (or a subtype of any listed
+k-type). A mismatch produces a warning but does not block the operation, preserving
+flexibility while surfacing likely data-entry mistakes.
+
+```yaml
+context_member_types:
+  - specimen
+```
+
+Only meaningful on k-types that also declare `context: true`. Omit on abstract base types
+and on context k-types that intentionally accept any member.
+
 ### `name`
 
 **Required.** Human-readable name. Either a plain string or a multilingual map:

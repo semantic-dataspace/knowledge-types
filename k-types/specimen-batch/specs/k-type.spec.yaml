@@ -1,0 +1,38 @@
+format_version: "0.1"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/specimen-batch-v0.1.0/k-types/specimen-batch/specs/k-type.spec.yaml"
+
+id: specimen-batch
+version: "0.1.0"
+maturity: 'draft'
+
+name: "Specimen Batch"
+description: >
+  A collection of specimens produced or prepared together as a single lot, for example
+  test pieces cut from the same sheet or heat-treated in the same furnace run. Acts as
+  a context anchor: specimens are registered as members to scope characterization queries
+  and graph views to this batch.
+
+synonyms:
+  - "sample batch"
+  - "specimen lot"
+
+extends: ../batch/specs/k-type.spec.yaml
+
+ontology_classes:
+  - iri: "https://w3id.org/pmd/co/PMD_0000891"
+    label: "Disconnected Material Entity Aggregate"
+    ontology: PMDCo
+
+context_member_types:
+  - specimen
+
+relations:
+  - id: source
+    label: "Source"
+    description: "Semi-finished product (e.g. metal sheet) from which the specimens in this batch were prepared."
+    iri: "http://www.w3.org/ns/prov#wasDerivedFrom"
+    target_k_types: [semi-finished-product]
+    cardinality: "0..1"
+    required: false
+
+tags: [batch, specimen]

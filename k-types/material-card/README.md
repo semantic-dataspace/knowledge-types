@@ -4,13 +4,13 @@ A structured summary of a material's properties combining identity, chemical com
 mechanical characterisation results, and provenance in one record.
 
 <table>
-<tr><td><strong>Version</strong></td><td><code>0.1.1</code></td></tr>
+<tr><td><strong>Version</strong></td><td><code>0.1.2</code></td></tr>
 <tr><td><strong>Inherits from</strong></td><td>—</td></tr>
 <tr><td><strong>Ontology</strong></td><td><code>pmdco:Material</code></td></tr>
 <tr><td><strong>Semantic schemas</strong></td><td>
 <code>chemical-composition/PMDCo</code> v0.1.0<br>
 <code>material-card/mechanical/PMDCo</code> v0.2.0<br>
-<code>specimen/PMDCo</code> v0.2.0<br>
+<code>specimen/PMDCo</code> v0.3.0<br>
 <code>workflow/OBI</code> v0.1.0
 </td></tr>
 <tr><td><strong>Links to</strong></td><td>material (required), characterization-process / tensile-test, chemical-composition</td></tr>

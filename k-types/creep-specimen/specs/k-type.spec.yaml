@@ -1,0 +1,82 @@
+format_version: "0.1"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/creep-specimen-v0.1.0/k-types/creep-specimen/specs/k-type.spec.yaml"
+
+id: creep-specimen
+version: "0.1.0"
+maturity: 'draft'
+
+name: "Creep Specimen"
+description: >
+  A specimen designed for creep and stress relaxation testing under sustained
+  load at elevated temperature, following standards such as ISO 204 and
+  ASTM E139. May have a cylindrical or flat gauge section with threaded or
+  shouldered grip ends. Inherits basic geometry fields from specimen and adds
+  gauge-section and grip dimensions specific to creep test pieces.
+
+synonyms:
+  - "creep test piece"
+  - "stress relaxation specimen"
+
+extends: ../specimen/specs/k-type.spec.yaml
+
+custom_properties:
+  semantics_enabled: true
+  sections_enabled: false
+  sections:
+    - id: section-creep-gauge
+      name: "Gauge Section"
+      inputs:
+        - id: input-creep-gauge-length
+          label: "Gauge length"
+          widget: Number
+          required: false
+          hint: "Length of the parallel gauge section (L0)"
+          measurement_unit:
+            iri: "http://qudt.org/vocab/unit/MilliM"
+            label: "Millimetre"
+            symbol: "mm"
+            namespace: qudt
+          relation_mapping:
+            iri: "https://w3id.org/steel/ProcessOntology/hasGaugeLengthLo_Object"
+            type: data_property
+        - id: input-creep-gauge-diameter
+          label: "Gauge diameter"
+          widget: Number
+          required: false
+          hint: "Diameter of the cylindrical gauge section (for round specimens)"
+          measurement_unit:
+            iri: "http://qudt.org/vocab/unit/MilliM"
+            label: "Millimetre"
+            symbol: "mm"
+            namespace: qudt
+          relation_mapping:
+            iri: "https://w3id.org/steel/ProcessOntology/hasDiameter_Object"
+            type: data_property
+    - id: section-creep-grip
+      name: "Grip Ends"
+      inputs:
+        - id: input-creep-grip-type
+          label: "Grip type"
+          widget: Select
+          required: false
+          hint: "How the specimen is held in the testing machine"
+          options:
+            - value: threaded
+              label: "Threaded"
+            - value: shouldered
+              label: "Shouldered"
+            - value: flat
+              label: "Flat (pinned)"
+          relation_mapping:
+            iri: "https://w3id.org/steel/ProcessOntology/hasSampleType_Object"
+            type: data_property
+        - id: input-creep-thread-spec
+          label: "Thread specification"
+          widget: Text
+          required: false
+          hint: "e.g. M10 × 1.5, 3/8-24 UNF"
+          relation_mapping:
+            iri: "https://w3id.org/steel/ProcessOntology/hasSampleInfos_Object"
+            type: data_property
+
+tags: [specimen, creep-specimen]

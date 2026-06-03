@@ -1,0 +1,78 @@
+format_version: "0.1"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/metal-sheet-v0.1.0/k-types/metal-sheet/specs/k-type.spec.yaml"
+
+id: metal-sheet
+version: "0.1.0"
+maturity: 'draft'
+
+name: "Metal Sheet"
+description: >
+  A flat-rolled semi-finished metal product with defined dimensions. Typically
+  delivered as a cut sheet or as part of a coil. Acts as the physical source
+  material from which specimens are prepared.
+
+synonyms:
+  - "sheet metal"
+  - "flat product"
+  - "plate"
+
+extends: ../semi-finished-product/specs/k-type.spec.yaml
+
+ontology_classes:
+  - iri: "http://purl.obolibrary.org/obo/BFO_0000030"
+    label: "Object"
+    ontology: BFO
+
+custom_properties:
+  semantics_enabled: true
+  sections_enabled: false
+  sections:
+    - id: section-sheet-dimensions
+      name: "Dimensions"
+      inputs:
+        - id: input-sheet-thickness
+          label: "Thickness"
+          widget: Number
+          required: false
+          measurement_unit:
+            iri: "http://qudt.org/vocab/unit/MilliM"
+            label: "Millimetre"
+            symbol: "mm"
+            namespace: qudt
+          relation_mapping:
+            iri: "https://w3id.org/steel/ProcessOntology/hasTestPieceThickness_Object"
+            type: data_property
+        - id: input-sheet-width
+          label: "Width"
+          widget: Number
+          required: false
+          measurement_unit:
+            iri: "http://qudt.org/vocab/unit/MilliM"
+            label: "Millimetre"
+            symbol: "mm"
+            namespace: qudt
+          relation_mapping:
+            iri: "https://w3id.org/steel/ProcessOntology/hasWidth_Object"
+            type: data_property
+        - id: input-sheet-length
+          label: "Length"
+          widget: Number
+          required: false
+          measurement_unit:
+            iri: "http://qudt.org/vocab/unit/MilliM"
+            label: "Millimetre"
+            symbol: "mm"
+            namespace: qudt
+          relation_mapping:
+            iri: "https://w3id.org/steel/ProcessOntology/hasTestPieceLength_Object"
+            type: data_property
+        - id: input-sheet-surface
+          label: "Surface condition"
+          widget: Text
+          required: false
+          hint: "e.g. hot-rolled, cold-rolled, annealed, pickled"
+          relation_mapping:
+            iri: "https://w3id.org/steel/ProcessOntology/hasSampleInfos_Object"
+            type: data_property
+
+tags: [semi-finished-product, metal-sheet]

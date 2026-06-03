@@ -19,6 +19,10 @@ id: <your-id>       # kebab-case; unique across all k-types
 version: "0.1.0"    # semver: MAJOR.MINOR.PATCH
 maturity: 'draft'
 # abstract: true    # uncomment if this k-type should never be instantiated directly
+# context: true     # uncomment to mark k-items of this type as context anchors (named scopes
+#                   # that group related k-items, e.g. a process or batch). Inherited by child k-types.
+# context_member_types:   # optional: restrict which k-types may be members of this context.
+#   - specimen            # mismatches produce a warning, not an error.
 
 # Simple string or multilingual map:
 #   name: "Tensile Test"

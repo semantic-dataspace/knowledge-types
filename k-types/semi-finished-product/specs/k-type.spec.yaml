@@ -1,0 +1,72 @@
+format_version: "0.1"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/semi-finished-product-v0.1.0/k-types/semi-finished-product/specs/k-type.spec.yaml"
+
+id: semi-finished-product
+version: "0.1.0"
+maturity: 'draft'
+abstract: true
+
+name: "Semi-Finished Product"
+description: >
+  Abstract base k-type for traceable physical pieces of material that have been
+  produced or delivered but not yet brought to final form. Examples include metal
+  sheets, coils, billets, and bars. Extend this k-type for specific product forms.
+  Not to be confused with the material k-type, which represents the abstract alloy
+  or substance identity.
+
+synonyms:
+  - "semi-finished material"
+  - "material piece"
+  - "intermediate product"
+
+ontology_classes:
+  - iri: "http://purl.obolibrary.org/obo/BFO_0000030"
+    label: "Object"
+    ontology: BFO
+
+relations:
+  - id: made_of
+    label: "Material"
+    description: "Abstract alloy or substance identity of this piece."
+    iri: "https://schema.org/material"
+    target_k_types: [material]
+    cardinality: "0..1"
+    required: false
+  - id: supplier
+    label: "Supplier"
+    description: "Organisation that supplied this piece."
+    iri: "https://schema.org/supplier"
+    target_k_types: [organization]
+    cardinality: "0..1"
+    required: false
+
+custom_properties:
+  semantics_enabled: true
+  sections_enabled: false
+  sections:
+    - id: section-sfp-info
+      name: "Product Information"
+      inputs:
+        - id: input-sfp-lot-number
+          label: "Lot / heat number"
+          widget: Text
+          required: false
+          relation_mapping:
+            iri: "https://schema.org/identifier"
+            type: data_property
+        - id: input-sfp-receipt-date
+          label: "Receipt date"
+          widget: Date
+          required: false
+          relation_mapping:
+            iri: "https://schema.org/dateReceived"
+            type: data_property
+        - id: input-sfp-quantity
+          label: "Quantity"
+          widget: Number
+          required: false
+          relation_mapping:
+            iri: "https://schema.org/numberOfItems"
+            type: data_property
+
+tags: [semi-finished-product]

@@ -1,5 +1,14 @@
 # Changelog — Project
 
+## [0.3.0] — 2026-06-03
+
+### Added
+
+- `context: true` — marks project instances as context anchors; k-items can be
+  registered as members to scope graph views and queries to a specific project.
+
+---
+
 ## [0.2.0] — 2026-05-11
 
 ### Added
