@@ -16,7 +16,7 @@ synonyms:
   - "alloy composition"
 
 ontology_classes:
-  - iri: "https://w3id.org/pmd/co/ChemicalComposition"
+  - iri: "https://w3id.org/pmd/co/PMD_0000551"
     label: "Chemical Composition"
     ontology: PMDCo
 

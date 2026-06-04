@@ -17,9 +17,6 @@ synonyms:
   - "coupon"
 
 ontology_classes:
-  - iri: "https://w3id.org/pmd/co/Specimen"
-    label: "Specimen"
-    ontology: PMDCo
   - iri: "http://purl.obolibrary.org/obo/OBI_0100051"
     label: "Specimen"
     ontology: OBI

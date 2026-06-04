@@ -6,3 +6,8 @@
 - Ontology class: `pmdco:ChemicalComposition`.
 - Semantic schemas: `chemical-composition/PMDCo` v1.0.0, `chemical-composition/BWMD` v1.0.0.
 - Relation: composition_of → material or specimen.
+
+### Fixed
+
+- Updated PMDCo IRI from human-readable `https://w3id.org/pmd/co/ChemicalComposition` to
+  verified numeric form `https://w3id.org/pmd/co/PMD_0000551`.

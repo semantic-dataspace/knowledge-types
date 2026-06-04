@@ -2,6 +2,11 @@
 
 ## [0.2.0] — 2026-06-03
 
+### Fixed
+
+- Removed `pmdco:Specimen` (`https://w3id.org/pmd/co/Specimen`) — class does not exist in PMDCo;
+  `obi:Specimen` (OBI_0100051) was already present and is the sole valid mapping.
+
 ### Changed
 
 - **Breaking:** removed `extends: material`. Specimen is now a standalone k-type and no

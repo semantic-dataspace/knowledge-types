@@ -17,6 +17,16 @@ It lists every file that must change, the order to change them, verification
 commands, and common pitfalls. The checklist is designed to be used by both
 human contributors and LLM agents.
 
+## Referencing ontology classes
+
+The `ontology_classes` field maps a k-type to one or more classes in external ontologies.
+Three rules are enforced by the CI tests on every pull request:
+
+- The IRI must be an absolute HTTP(S) URI.
+- The IRI must not be a GitHub browsing URL (e.g. `https://github.com/org/repo/ClassName`).
+  Use the ontology's persistent identifier namespace instead.
+- PMDCo IRIs must use the numeric form `https://w3id.org/pmd/co/PMD_XXXXXXX`
+
 ## Referencing semantic schemas
 
 The `semantic_schemas` field in a spec must stay in sync with the
@@ -70,6 +80,7 @@ SEMANTIC_SCHEMAS_PATH=/path/to/semantic-schemas pytest tests/ -v
 - [ ] Spec file is at `k-types/<id>/specs/k-type.spec.yaml`
 - [ ] `README.md` and `CHANGELOG.md` are present
 - [ ] `maturity` is set
+- [ ] All `ontology_classes` IRIs are absolute HTTP(S) URIs, not GitHub browsing URLs, and PMDCo IRIs use the numeric `PMD_XXXXXXX` form
 - [ ] All `semantic_schemas` entries have pinned URLs and versions matching the manifest
 - [ ] [CATALOG.md](CATALOG.md) is updated
 - [ ] CI passes

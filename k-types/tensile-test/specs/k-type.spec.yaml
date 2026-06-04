@@ -20,12 +20,12 @@ synonyms:
 extends: ../characterization-process/specs/k-type.spec.yaml
 
 ontology_classes:
+  - iri: "https://w3id.org/pmd/co/PMD_0000974"
+    label: "Tensile Testing Process"
+    ontology: PMDCo
   - iri: "https://w3id.org/steel/ProcessOntology/TensileTest"
     label: "Tensile Test"
     ontology: SteelProcessOntology
-  - iri: "https://github.com/materialdigital/tensile-test-ontology/TensileTest"
-    label: "Tensile Test"
-    ontology: TTO
 
 semantic_schemas:
   - id: "characterization/tensile-test/TTO"

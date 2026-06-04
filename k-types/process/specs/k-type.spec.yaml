@@ -15,9 +15,9 @@ description: >
   with a more specific type such as manufacturing-process or characterization-process.
 
 ontology_classes:
-  - iri: "https://w3id.org/pmd/co/Process"
+  - iri: "http://purl.obolibrary.org/obo/BFO_0000015"
     label: "Process"
-    ontology: PMDCo
+    ontology: BFO
 
 kv_properties:
   enabled: true

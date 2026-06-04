@@ -2,6 +2,12 @@
 
 ## [0.1.2] — 2026-06-03
 
+### Fixed
+
+- Replaced `pmdco:Material` (PMD_0000000) with `orchester:MaterialCard`
+  (`https://w3id.org/dsms/orchester/MaterialCard`) — a material card is a simulation input
+  record, not a material entity.
+
 ### Changed
 
 - Bumped `specimen/PMDCo` schema reference to v0.3.0.

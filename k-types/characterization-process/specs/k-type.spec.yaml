@@ -23,9 +23,9 @@ ontology_classes:
   - iri: "http://purl.obolibrary.org/obo/OBI_0000070"
     label: "Assay"
     ontology: OBI
-  - iri: "https://w3id.org/pmd/co/CharacterisationProcess"
-    label: "Characterisation Process"
-    ontology: PMDCo
+  - iri: "https://w3id.org/emmo/domain/characterisation-methodology/chameo#CharacterisationExperiment"
+    label: "Characterisation Experiment"
+    ontology: CHAMEO
 
 semantic_schemas:
   - id: "characterization/generic/PMDCo"

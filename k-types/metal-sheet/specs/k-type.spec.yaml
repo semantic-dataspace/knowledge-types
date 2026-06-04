@@ -19,9 +19,9 @@ synonyms:
 extends: ../semi-finished-product/specs/k-type.spec.yaml
 
 ontology_classes:
-  - iri: "http://purl.obolibrary.org/obo/BFO_0000030"
-    label: "Object"
-    ontology: BFO
+  - iri: "https://w3id.org/pmd/co/PMD_0020172"
+    label: "Sheet"
+    ontology: PMDCo
 
 custom_properties:
   semantics_enabled: true

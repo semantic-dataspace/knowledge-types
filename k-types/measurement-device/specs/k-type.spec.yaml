@@ -19,9 +19,12 @@ ontology_classes:
   - iri: "http://purl.obolibrary.org/obo/OBI_0000968"
     label: "Device"
     ontology: OBI
-  - iri: "https://w3id.org/pmd/co/MeasuringDevice"
-    label: "Measuring Device"
+  - iri: "https://w3id.org/pmd/co/PMD_0000602"
+    label: "Device"
     ontology: PMDCo
+  - iri: "https://w3id.org/emmo/domain/characterisation-methodology/chameo#CharacterisationMeasurementInstrument"
+    label: "Characterisation Measurement Instrument"
+    ontology: CHAMEO
 
 semantic_schemas:
   - id: "measurement-device/PMDCo"

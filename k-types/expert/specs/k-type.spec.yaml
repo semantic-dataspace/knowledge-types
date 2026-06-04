@@ -20,9 +20,9 @@ synonyms:
 extends: ../person/specs/k-type.spec.yaml
 
 ontology_classes:
-  - iri: "https://w3id.org/emmo#EMMO_27c5d8c6_8af7_4d63_beb1_ec37cd8b3fa3"
+  - iri: "https://w3id.org/dsms/orchester/Expert"
     label: "Expert"
-    ontology: EMMO
+    ontology: ORCHESTER
 
 semantic_schemas:
   - id: "expertise/VIVO"

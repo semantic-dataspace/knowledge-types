@@ -18,7 +18,7 @@ synonyms:
 extends: ../process/specs/k-type.spec.yaml
 
 ontology_classes:
-  - iri: "https://w3id.org/pmd/co/ManufacturingProcess"
+  - iri: "https://w3id.org/pmd/co/PMD_0000833"
     label: "Manufacturing Process"
     ontology: PMDCo
 

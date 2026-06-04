@@ -1,7 +1,8 @@
 # Material Card
 
-A structured summary of a material's properties combining identity, chemical composition,
-mechanical characterisation results, and provenance in one record.
+A structured set of material parameters serving as input for material simulations, such as
+FEM tools. Combines mechanical characterisation results, chemical composition, and material
+identity into a parameterised record that can be consumed directly by simulation software.
 
 <table>
 <tr><td><strong>Version</strong></td><td><code>0.1.2</code></td></tr>

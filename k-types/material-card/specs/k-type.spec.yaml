@@ -18,9 +18,9 @@ synonyms:
   - "material passport"
 
 ontology_classes:
-  - iri: "https://w3id.org/pmd/co/Material"
-    label: "Material"
-    ontology: PMDCo
+  - iri: "https://w3id.org/dsms/orchester/MaterialCard"
+    label: "Material Card"
+    ontology: ORCHESTER
 
 semantic_schemas:
   - id: "material-card/mechanical/PMDCo"

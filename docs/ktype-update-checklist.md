@@ -39,6 +39,10 @@ The bump determines the new version string used in all subsequent steps.
   update [CATALOG.md](../CATALOG.md) accordingly.
 - [ ] If `extends` changed, verify that all inherited fields still apply and
   that no circular dependency was introduced.
+- [ ] If `ontology_classes` changed: confirm each IRI exists in the ontology's
+  published class index before committing. For PMDCo, use the
+  [core ontology index](https://materialdigital.github.io/core-ontology/index-en.html)
+  and record the numeric `PMD_XXXXXXX` form — not the human-readable name.
 
 **Verify:**
 

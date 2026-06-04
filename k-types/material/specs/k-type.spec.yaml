@@ -19,12 +19,9 @@ synonyms:
   - "engineered material"
 
 ontology_classes:
-  - iri: "https://w3id.org/pmd/co/Material"
+  - iri: "https://w3id.org/pmd/co/PMD_0000000"
     label: "Material"
     ontology: PMDCo
-  - iri: "https://w3id.org/emmo#EMMO_4207e895_8b83_4318_996a_72cfb32acd94"
-    label: "Material"
-    ontology: EMMO
 
 kv_properties:
   enabled: true
