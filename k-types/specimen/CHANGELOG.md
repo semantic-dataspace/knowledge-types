@@ -1,5 +1,14 @@
 # Changelog — Specimen
 
+## [0.2.1] — 2026-07-21
+
+### Changed
+
+- Bumped `specimen/PMDCo` schema reference to v0.4.0
+  (`type` field aligned with JSON-LD array convention).
+
+---
+
 ## [0.2.0] — 2026-06-03
 
 ### Fixed

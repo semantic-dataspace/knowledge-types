@@ -20,6 +20,12 @@ ontology_classes:
     label: "Dataset"
     ontology: DCAT
 
+semantic_schemas:
+  - id: "dataset/generic/DCAT"
+    version: "0.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/dataset-generic-DCAT-v0.1.0/schemas/dataset/generic/DCAT/specs/schema.oold.yaml"
+    role: dataset_description
+
 kv_properties:
   enabled: true
   semantic_mapping: true

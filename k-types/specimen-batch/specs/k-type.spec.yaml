@@ -26,13 +26,4 @@ ontology_classes:
 context_member_types:
   - specimen
 
-relations:
-  - id: source
-    label: "Source"
-    description: "Semi-finished product (e.g. metal sheet) from which the specimens in this batch were prepared."
-    iri: "http://www.w3.org/ns/prov#wasDerivedFrom"
-    target_k_types: [semi-finished-product]
-    cardinality: "0..1"
-    required: false
-
 tags: [batch, specimen]

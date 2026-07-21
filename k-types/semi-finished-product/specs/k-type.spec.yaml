@@ -24,22 +24,6 @@ ontology_classes:
     label: "Object"
     ontology: BFO
 
-relations:
-  - id: made_of
-    label: "Material"
-    description: "Abstract alloy or substance identity of this piece."
-    iri: "https://schema.org/material"
-    target_k_types: [material]
-    cardinality: "0..1"
-    required: false
-  - id: supplier
-    label: "Supplier"
-    description: "Organisation that supplied this piece."
-    iri: "https://schema.org/supplier"
-    target_k_types: [organization]
-    cardinality: "0..1"
-    required: false
-
 custom_properties:
   semantics_enabled: true
   sections_enabled: false

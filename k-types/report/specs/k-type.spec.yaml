@@ -1,0 +1,51 @@
+format_version: "0.1"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/report-v0.1.0/k-types/report/specs/k-type.spec.yaml"
+
+id: report
+version: "0.1.0"
+maturity: 'draft'
+
+name: "Report"
+description: >
+  A structured document produced as part of an experimental or data collection
+  activity. Examples: test protocols, measurement reports, inspection records,
+  images, and log files attached to a dataset or process.
+  Extends document with a date field and links to the generating process.
+
+synonyms:
+  - "protocol"
+  - "test report"
+  - "measurement protocol"
+  - "log"
+
+extends: ../document/specs/k-type.spec.yaml
+
+ontology_classes:
+  - iri: "http://purl.obolibrary.org/obo/IAO_0000088"
+    label: "report"
+    ontology: IAO
+
+custom_properties:
+  semantics_enabled: true
+  sections_enabled: false
+  sections:
+    - id: section-report-info
+      name: "Report Information"
+      inputs:
+        - id: input-report-date
+          label: "Date"
+          widget: Date
+          required: false
+          relation_mapping:
+            iri: "http://purl.org/dc/terms/date"
+            type: data_property
+        - id: input-report-type
+          label: "Report type"
+          widget: Text
+          required: false
+          hint: "e.g. test protocol, measurement report, image, log file"
+          relation_mapping:
+            iri: "http://purl.org/dc/terms/type"
+            type: data_property
+
+tags: [data, document, report]

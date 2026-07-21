@@ -111,8 +111,7 @@ A k-type specification is a single YAML file that captures four things:
 | What | Purpose |
 |---|---|
 | **Ontology class mappings** | Labels k-items of this type in the knowledge graph with standard IRIs |
-| **Semantic schemas** | Specifies how to convert k-item data to linked data (RDF) |
-| **Relations** | Declares which other k-types a k-item can or must link to |
+| **Semantic schemas** | Specifies how to convert k-item data to linked data (RDF), including which k-types a URI field can link to (`x-kitem`) |
 | **Custom properties** | Defines the form users fill in when creating a k-item |
 
 This means a k-type spec is both a *human-readable description* of a concept (what a tensile test
@@ -127,9 +126,9 @@ K-types can build on each other. A `tensile-test` is a specialisation of a
 `characterization-process`, which is itself a specialisation of `process`. A child k-type inherits
 all definitions from its parents and only declares what is new or different.
 
-This avoids duplication: the three required relations (operator, instrument, specimen) are declared
-once on `characterization-process` and automatically apply to every measurement k-type that
-extends it, including `tensile-test`.
+This avoids duplication: the semantic schema inherited by `characterization-process` declares
+operator, instrument, and specimen connections once, and all k-types that extend it — including
+`tensile-test` — share those fields.
 
 K-types support multiple inheritance: a k-type can extend more than one parent when it belongs to
 more than one category simultaneously. See [docs/3_inheritance.md](3_inheritance.md) for the full
@@ -144,6 +143,6 @@ is a common vocabulary: a `tensile-test` k-type defined here carries the same me
 instance that imports it, enabling data exchange and comparison across institutions without
 additional mapping work.
 
-K-types are versioned using semantic versioning. Breaking changes (renamed fields, removed
-relations, incompatible ontology classes) increment the major version; backwards-compatible
-additions increment the minor version.
+K-types are versioned using semantic versioning. Breaking changes (renamed fields, incompatible
+ontology classes, changed semantic schema references) increment the major version;
+backwards-compatible additions increment the minor version.

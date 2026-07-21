@@ -7,7 +7,9 @@ The primary container for raw and processed experimental or computational data f
 <tr><td><strong>Version</strong></td><td><code>0.1.0</code></td></tr>
 <tr><td><strong>Inherits from</strong></td><td>—</td></tr>
 <tr><td><strong>Ontology</strong></td><td><code>dcat:Dataset</code></td></tr>
-<tr><td><strong>Semantic schemas</strong></td><td>—</td></tr>
+<tr><td><strong>Semantic schemas</strong></td><td>
+<code>dataset/generic/DCAT</code> v0.1.0
+</td></tr>
 <tr><td><strong>Links to</strong></td><td>—</td></tr>
 </table>
 

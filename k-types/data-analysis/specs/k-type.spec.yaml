@@ -1,0 +1,32 @@
+format_version: "0.1"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/data-analysis-v0.1.0/k-types/data-analysis/specs/k-type.spec.yaml"
+
+id: data-analysis
+version: "0.1.0"
+maturity: 'draft'
+
+name: "Data Analysis"
+description: >
+  A process that transforms, evaluates, or derives new data from existing datasets.
+  Examples: fitting routines, post-processing scripts, statistical evaluations, and
+  material card generation. Extend this k-type for specific analysis types.
+
+synonyms:
+  - "data processing"
+  - "evaluation"
+  - "post-processing"
+
+extends: ../process/specs/k-type.spec.yaml
+
+ontology_classes:
+  - iri: "http://purl.obolibrary.org/obo/OBI_0200000"
+    label: "data transformation"
+    ontology: OBI
+
+semantic_schemas:
+  - id: "data-analysis/generic/PMDCo"
+    version: "0.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/data-analysis-generic-PMDCo-v0.1.0/schemas/data-analysis/generic/PMDCo/specs/schema.oold.yaml"
+    role: data_analysis_step
+
+tags: [process, data, analysis]
