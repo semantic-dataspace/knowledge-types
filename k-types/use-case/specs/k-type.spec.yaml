@@ -1,0 +1,89 @@
+format_version: "0.1"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/use-case-v0.1.0/k-types/use-case/specs/k-type.spec.yaml"
+
+id: use-case
+version: "0.1.0"
+maturity: "draft"
+context: true
+
+extends: ../process/specs/k-type.spec.yaml
+
+name: "Use Case"
+description: >
+  A complete, end-to-end materials data workflow: from raw material through
+  characterisation, data analysis, and modelling to a final deliverable such
+  as a material card or simulation parameter set. Use this k-type as the
+  top-level context that groups all KItems belonging to one workflow instance.
+  Individual steps (specimens, tests, datasets, analysis, material card) are
+  members of the use-case context.
+
+synonyms:
+  - "materials workflow"
+  - "characterisation campaign"
+  - "data campaign"
+
+ontology_classes:
+  - iri: "http://purl.obolibrary.org/obo/OBI_0000070"
+    label: "Assay"
+    ontology: OBI
+
+custom_properties:
+  semantics_enabled: true
+  sections_enabled: true
+  sections:
+    - id: section-usecase-scope
+      name: "Scope"
+      inputs:
+        - id: input-usecase-material-system
+          label: "Material system"
+          widget: Text
+          required: false
+          hint: "e.g. AWX5 stainless steel, AA6016-T4 aluminium"
+          relation_mapping:
+            iri: "https://schema.org/name"
+            type: data_property
+        - id: input-usecase-objective
+          label: "Objective"
+          widget: Textarea
+          required: false
+          hint: "e.g. Generate FEM material card for deep-drawing simulation"
+          relation_mapping:
+            iri: "https://w3id.org/steel/ProcessOntology/hasRemark_Object"
+            type: data_property
+        - id: input-usecase-test-types
+          label: "Test types"
+          widget: Text
+          required: false
+          hint: "e.g. Tensile, Bulge, Nakajima"
+          relation_mapping:
+            iri: "http://purl.org/dc/terms/type"
+            type: data_property
+        - id: input-usecase-norm
+          label: "Standard / norm"
+          widget: Text
+          required: false
+          hint: "e.g. ISO 6892-1, DIN EN 10002"
+          relation_mapping:
+            iri: "http://purl.org/dc/terms/conformsTo"
+            type: data_property
+    - id: section-usecase-deliverable
+      name: "Deliverable"
+      inputs:
+        - id: input-usecase-deliverable-type
+          label: "Deliverable type"
+          widget: Text
+          required: false
+          hint: "e.g. Material card, Flow curve, FEM input deck"
+          relation_mapping:
+            iri: "http://purl.org/dc/terms/description"
+            type: data_property
+        - id: input-usecase-deliverable-format
+          label: "Deliverable format"
+          widget: Text
+          required: false
+          hint: "e.g. Abaqus .mat, LS-DYNA *MAT, JSON"
+          relation_mapping:
+            iri: "http://purl.org/dc/terms/format"
+            type: data_property
+
+tags: [use-case, workflow, campaign]

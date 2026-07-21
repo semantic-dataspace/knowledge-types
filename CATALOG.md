@@ -11,6 +11,7 @@ graph TD
   process --> manufacturing-process
   process --> characterization-process
   process --> data-analysis
+  process --> use-case
   characterization-process --> tensile-test
   characterization-process --> bulge-test
   characterization-process --> nakajima-test
@@ -55,7 +56,8 @@ graph TD
   class person,expert,organization agent
   class material,chemical-composition material
   class specimen,flat-specimen,creep-specimen,semi-finished-product,metal-sheet physical
-  class process,manufacturing-process,characterization-process,data-analysis,tensile-test,bulge-test,nakajima-test process
+  class process,manufacturing-process,characterization-process,data-analysis process
+  class tensile-test,bulge-test,nakajima-test,use-case process
   class measurement-device equipment
   class dataset,dataset-catalog,document,report,app,material-card data
   class project research
@@ -96,3 +98,4 @@ graph TD
 | [specimen](k-types/specimen/) | Specimen | | OBI | specimen/PMDCo v0.4.0 | | specimen |
 | [specimen-batch](k-types/specimen-batch/) | Specimen Batch | batch | PMDCo | | | batch, specimen |
 | [tensile-test](k-types/tensile-test/) | Tensile Test | characterization-process | SteelPO, TTO | characterization/tensile-test/TTO v0.2.0, characterization/tensile-test/PMDCo v0.3.0 | specimen/material (in, inherited), specimen/dataset (out, inherited), expert (inherited), measurement-device (inherited) | process, characterization, mechanical-testing |
+| [use-case](k-types/use-case/) | Use Case | process | OBI | | | use-case, workflow, campaign |
