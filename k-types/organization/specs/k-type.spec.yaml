@@ -26,15 +26,6 @@ ontology_classes:
     label: "Organization"
     ontology: schema.org
 
-relations:
-  - id: sub_organization_of
-    label: "Sub-organisation of"
-    description: "Parent organisation this organisation belongs to."
-    iri: "http://www.w3.org/ns/org#subOrganizationOf"
-    target_k_types: [organization]
-    cardinality: "0..1"
-    required: false
-
 custom_properties:
   semantics_enabled: true
   sections_enabled: false

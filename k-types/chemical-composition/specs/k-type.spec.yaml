@@ -1,8 +1,8 @@
 format_version: "0.1"
-$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/chemical-composition-v0.1.0/k-types/chemical-composition/specs/k-type.spec.yaml"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/chemical-composition-v0.1.1/k-types/chemical-composition/specs/k-type.spec.yaml"
 
 id: chemical-composition
-version: "0.1.0"
+version: "0.1.1"
 maturity: 'draft'
 
 name: "Chemical Composition"
@@ -22,21 +22,12 @@ ontology_classes:
 
 semantic_schemas:
   - id: "chemical-composition/PMDCo"
-    version: "0.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/chemical-composition-PMDCo-v0.1.0/schemas/chemical-composition/PMDCo/specs/schema.oold.yaml"
+    version: "0.2.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/chemical-composition-PMDCo-v0.2.0/schemas/chemical-composition/PMDCo/specs/schema.oold.yaml"
     role: composition_record
   - id: "chemical-composition/BWMD"
-    version: "0.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/chemical-composition-BWMD-v0.1.0/schemas/chemical-composition/BWMD/specs/schema.oold.yaml"
+    version: "0.2.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/chemical-composition-BWMD-v0.2.0/schemas/chemical-composition/BWMD/specs/schema.oold.yaml"
     role: composition_record
-
-relations:
-  - id: composition_of
-    label: "Composition of"
-    description: "Material whose elemental composition this record describes."
-    iri: "https://w3id.org/pmd/co/qualityOf"
-    target_k_types: [material, specimen]
-    cardinality: "0..1"
-    required: false
 
 tags: [material, composition]

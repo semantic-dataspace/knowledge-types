@@ -1,0 +1,33 @@
+format_version: "0.1"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/nakajima-test-v0.1.1/k-types/nakajima-test/specs/k-type.spec.yaml"
+
+id: nakajima-test
+version: "0.1.1"
+maturity: 'draft'
+
+name: "Nakajima Test"
+description: >
+  A Nakajima forming-limit test that determines the forming limit curve (FLC)
+  of sheet metal by deforming specimens of varying widths over a hemispherical
+  punch until localised necking occurs. The FLC defines the boundary between
+  safe and failed strain states for sheet forming processes.
+
+synonyms:
+  - "forming limit test"
+  - "FLC test"
+  - "Nakajimaversuch"
+
+extends: ../characterization-process/specs/k-type.spec.yaml
+
+ontology_classes:
+  - iri: "http://purl.obolibrary.org/obo/OBI_0000070"
+    label: "assay"
+    ontology: OBI
+
+semantic_schemas:
+  - id: "characterization/generic/PMDCo"
+    version: "0.2.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/characterization-generic-PMDCo-v0.2.0/schemas/characterization/generic/PMDCo/specs/schema.oold.yaml"
+    role: measurement_results
+
+tags: [process, characterization, mechanical-testing, forming, nakajima, flc]

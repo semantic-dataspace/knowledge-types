@@ -31,8 +31,8 @@ change this: it is the key used in `extends` references and in the DSMS database
 
 **Required.** Semantic version of this k-type specification (`MAJOR.MINOR.PATCH`).
 
-- **MAJOR**: breaking changes (renamed or removed fields, changed ontology classes, removed relations).
-- **MINOR**: backwards-compatible additions (new optional fields, new relations, new schemas).
+- **MAJOR**: breaking changes (renamed or removed fields, changed ontology classes, changed semantic schemas).
+- **MINOR**: backwards-compatible additions (new optional fields, new semantic schema references).
 - **PATCH**: corrections that do not affect structure or semantics (typos, description fixes).
 
 ### `maturity`
@@ -179,36 +179,25 @@ semantic_schemas:
 | `url` | GitHub tree URL at the per-schema release tag |
 | `role` | Optional: how this schema is used (e.g. `process_step`, `provenance`, `input_material`) |
 
----
-
-## `relations`
-
-**Optional.** Typed links from k-items of this type to k-items of other k-types.
-These become edges in the knowledge graph and drive the k-item picker in the UI.
+Inter-k-item connections (links to k-items of specific types) are declared inside semantic
+schemas using the `x-kitem` extension field on URI properties. For example:
 
 ```yaml
-relations:
-  - id: has_operator
-    label: "Operator"
-    description: "Expert who performed this process."
-    iri: "http://www.w3.org/ns/prov#wasAssociatedWith"
-    target_k_types: [expert]
-    cardinality: "0..n"
-    required: false
+has_specified_input:
+  title: Specimen
+  x-kitem:
+    ktypeIds: ["specimen", "material"]
+  type: array
+  items:
+    type: string
+    format: uri
 ```
 
-| Sub-field | Description |
-|---|---|
-| `id` | Snake-case identifier, unique within this k-type's effective relations |
-| `label` | Human-readable label shown in the UI |
-| `description` | Optional clarification |
-| `iri` | Ontology property IRI used for the RDF triple |
-| `target_k_types` | List of k-type IDs that are valid targets for this relation |
-| `cardinality` | `"0..1"` \| `"1..1"` \| `"0..n"` \| `"1..n"` |
-| `required` | Whether the relation must be filled when creating a k-item |
-
-Relations are inherited from parent k-types. A child can override a relation by declaring
-one with the same `id`.
+When the platform renders a form, fields with `x-kitem` become k-item pickers scoped to the
+listed k-types. The resulting link is stored as a `KItemLink` with the ontology property IRI
+from the schema's `@context`. Multiple semantic schemas can express the same structural
+connection under different ontological frameworks; the active schema is selected at the
+k-type service level.
 
 ---
 

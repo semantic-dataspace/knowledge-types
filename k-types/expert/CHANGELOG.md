@@ -1,5 +1,14 @@
 # Changelog — Expert
 
+## [0.1.1] — 2026-07-21
+
+### Changed
+
+- Bumped `expertise/VIVO` schema reference to v0.3.0
+  (`type` field aligned with JSON-LD array convention).
+
+---
+
 ## [0.1.0] — 2026-04-28
 
 - Initial specification.

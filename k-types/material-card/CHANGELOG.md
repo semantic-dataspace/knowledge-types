@@ -1,5 +1,20 @@
 # Changelog — Material Card
 
+## [0.1.3] — 2026-07-21
+
+### Changed
+
+- Bumped `material-card/mechanical/PMDCo` schema reference to v0.3.0
+  (`type` field aligned with JSON-LD array convention).
+- Bumped `workflow/OBI` schema reference to v0.2.0
+  (`type` field aligned with JSON-LD array convention).
+- Bumped `specimen/PMDCo` schema reference to v0.4.0
+  (`type` field aligned with JSON-LD array convention).
+- Bumped `chemical-composition/PMDCo` schema reference to v0.2.0
+  (`type` field aligned with JSON-LD array convention).
+
+---
+
 ## [0.1.2] — 2026-06-03
 
 ### Fixed

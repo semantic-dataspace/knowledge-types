@@ -1,8 +1,8 @@
 format_version: "0.1"
-$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/manufacturing-process-v0.1.0/k-types/manufacturing-process/specs/k-type.spec.yaml"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/manufacturing-process-v0.1.1/k-types/manufacturing-process/specs/k-type.spec.yaml"
 
 id: manufacturing-process
-version: "0.1.0"
+version: "0.1.1"
 maturity: 'draft'
 
 name: "Manufacturing Process"
@@ -24,39 +24,9 @@ ontology_classes:
 
 semantic_schemas:
   - id: "manufacturing/generic/PMDCo"
-    version: "0.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/manufacturing-generic-PMDCo-v0.1.0/schemas/manufacturing/generic/PMDCo/specs/schema.oold.yaml"
+    version: "0.2.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/manufacturing-generic-PMDCo-v0.2.0/schemas/manufacturing/generic/PMDCo/specs/schema.oold.yaml"
     role: process_step
-
-relations:
-  - id: has_operator
-    label: "Operator"
-    description: "Expert who performed or supervised this process."
-    iri: "https://w3id.org/steel/ProcessOntology/hasOperator"
-    target_k_types: [expert]
-    cardinality: "0..n"
-    required: false
-  - id: has_input
-    label: "Input material"
-    description: "Material or semi-finished product fed into this process."
-    iri: "https://w3id.org/ORCHESTER/HasInput"
-    target_k_types: [material, specimen]
-    cardinality: "0..n"
-    required: false
-  - id: has_output
-    label: "Output material"
-    description: "Material or component produced by this process."
-    iri: "https://w3id.org/ORCHESTER/HasOutput"
-    target_k_types: [material, specimen]
-    cardinality: "0..n"
-    required: false
-  - id: has_dataset
-    label: "Process data"
-    description: "Dataset containing process parameters or monitoring data."
-    iri: "https://w3id.org/steel/ProcessOntology/parameters"
-    target_k_types: [dataset]
-    cardinality: "0..n"
-    required: false
 
 custom_properties:
   semantics_enabled: true

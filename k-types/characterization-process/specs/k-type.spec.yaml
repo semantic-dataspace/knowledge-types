@@ -1,8 +1,8 @@
 format_version: "0.1"
-$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/characterization-process-v0.1.0/k-types/characterization-process/specs/k-type.spec.yaml"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/characterization-process-v0.1.1/k-types/characterization-process/specs/k-type.spec.yaml"
 
 id: characterization-process
-version: "0.1.0"
+version: "0.1.1"
 maturity: 'draft'
 
 name: "Characterization Process"
@@ -29,38 +29,8 @@ ontology_classes:
 
 semantic_schemas:
   - id: "characterization/generic/PMDCo"
-    version: "0.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/characterization-generic-PMDCo-v0.1.0/schemas/characterization/generic/PMDCo/specs/schema.oold.yaml"
+    version: "0.2.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/characterization-generic-PMDCo-v0.2.0/schemas/characterization/generic/PMDCo/specs/schema.oold.yaml"
     role: measurement_step
-
-relations:
-  - id: has_operator
-    label: "Operator"
-    description: "Expert who performed this characterisation experiment."
-    iri: "http://www.w3.org/ns/prov#wasAssociatedWith"
-    target_k_types: [expert]
-    cardinality: "1..n"
-    required: true
-  - id: uses_instrument
-    label: "Measurement instrument"
-    description: "Device used to perform this characterisation."
-    iri: "https://schema.org/instrument"
-    target_k_types: [measurement-device]
-    cardinality: "1..1"
-    required: true
-  - id: has_specimen
-    label: "Specimen"
-    description: "Specimen or material that was characterised."
-    iri: "https://w3id.org/pmd/co/hasSpecifiedInput"
-    target_k_types: [specimen, material]
-    cardinality: "1..n"
-    required: true
-  - id: has_dataset
-    label: "Result dataset"
-    description: "Dataset containing the raw or processed measurement data."
-    iri: "http://purl.org/dc/terms/references"
-    target_k_types: [dataset]
-    cardinality: "0..n"
-    required: false
 
 tags: [process, characterization]

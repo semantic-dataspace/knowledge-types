@@ -5,14 +5,14 @@ FEM tools. Combines mechanical characterisation results, chemical composition, a
 identity into a parameterised record that can be consumed directly by simulation software.
 
 <table>
-<tr><td><strong>Version</strong></td><td><code>0.1.2</code></td></tr>
+<tr><td><strong>Version</strong></td><td><code>0.1.3</code></td></tr>
 <tr><td><strong>Inherits from</strong></td><td>—</td></tr>
-<tr><td><strong>Ontology</strong></td><td><code>pmdco:Material</code></td></tr>
+<tr><td><strong>Ontology</strong></td><td><code>orchester:MaterialCard</code></td></tr>
 <tr><td><strong>Semantic schemas</strong></td><td>
-<code>chemical-composition/PMDCo</code> v0.1.0<br>
-<code>material-card/mechanical/PMDCo</code> v0.2.0<br>
-<code>specimen/PMDCo</code> v0.3.0<br>
-<code>workflow/OBI</code> v0.1.0
+<code>chemical-composition/PMDCo</code> v0.2.0<br>
+<code>material-card/mechanical/PMDCo</code> v0.3.0<br>
+<code>specimen/PMDCo</code> v0.4.0<br>
+<code>workflow/OBI</code> v0.2.0
 </td></tr>
 <tr><td><strong>Links to</strong></td><td>material (required), characterization-process / tensile-test, chemical-composition</td></tr>
 </table>
@@ -23,7 +23,7 @@ A material card is a *cross-schema template*: it does not introduce new RDF clas
 orchestrates multiple semantic schemas to produce a coherent multi-graph record describing
 a material in full.
 
-The workflow schema (`workflow/PMDCo`) links the sub-graphs together; the other three
+The workflow schema (`workflow/OBI`) links the sub-graphs together; the other three
 schemas populate the individual sections.
 
 ## Schema composition
@@ -32,7 +32,7 @@ schemas populate the individual sections.
 material-card/mechanical/PMDCo     ← top-level template (routes input to sub-schemas)
   ├─ specimen/PMDCo                ← specimen envelope
   ├─ chemical-composition/PMDCo   ← element fractions
-  └─ workflow/PMDCo               ← overall workflow record
+  └─ workflow/OBI                 ← overall workflow record
 ```
 
 ## Relations

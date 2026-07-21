@@ -1,0 +1,31 @@
+format_version: "0.1"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/dataset-catalog-v0.1.0/k-types/dataset-catalog/specs/k-type.spec.yaml"
+
+id: dataset-catalog
+version: "0.1.0"
+maturity: 'draft'
+
+name: "Dataset Catalog"
+description: >
+  A curated collection of datasets, typically grouping the outputs of a
+  measurement campaign or experimental series. Extends dataset with a
+  dcat:dataset field that lists member datasets.
+
+synonyms:
+  - "measurement campaign"
+  - "dataset collection"
+
+extends: ../dataset/specs/k-type.spec.yaml
+
+ontology_classes:
+  - iri: "http://www.w3.org/ns/dcat#Catalog"
+    label: "Catalog"
+    ontology: DCAT
+
+semantic_schemas:
+  - id: "dataset/catalog/DCAT"
+    version: "0.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/dataset-catalog-DCAT-v0.1.0/schemas/dataset/catalog/DCAT/specs/schema.oold.yaml"
+    role: dataset_description
+
+tags: [data, dataset, catalog]

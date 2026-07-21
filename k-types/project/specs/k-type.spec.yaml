@@ -25,43 +25,6 @@ ontology_classes:
     label: "ResearchProject"
     ontology: schema.org
 
-relations:
-  - id: coordinator
-    label: "Coordinator / PI"
-    description: "Principal investigator or project coordinator."
-    iri: "http://vivoweb.org/ontology/core#pi"
-    target_k_types: [expert]
-    cardinality: "0..1"
-    required: false
-  - id: participants
-    label: "Participants"
-    description: "Researchers and engineers participating in the project."
-    iri: "https://schema.org/participant"
-    target_k_types: [expert]
-    cardinality: "0..n"
-    required: false
-  - id: partner_organizations
-    label: "Partner organisations"
-    description: "Institutions and companies involved in the project."
-    iri: "http://www.w3.org/ns/org#hasMember"
-    target_k_types: [organization]
-    cardinality: "0..n"
-    required: false
-  - id: funder
-    label: "Funder"
-    description: "Organisation that funds the project."
-    iri: "https://schema.org/funder"
-    target_k_types: [organization]
-    cardinality: "0..n"
-    required: false
-  - id: publications
-    label: "Publications"
-    description: "Documents published in the context of this project."
-    iri: "https://schema.org/hasPart"
-    target_k_types: [document]
-    cardinality: "0..n"
-    required: false
-
 custom_properties:
   semantics_enabled: true
   sections_enabled: true

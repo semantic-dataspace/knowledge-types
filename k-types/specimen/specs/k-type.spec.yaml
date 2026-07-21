@@ -1,8 +1,8 @@
 format_version: "0.1"
-$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/specimen-v0.2.0/k-types/specimen/specs/k-type.spec.yaml"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/specimen-v0.2.1/k-types/specimen/specs/k-type.spec.yaml"
 
 id: specimen
-version: "0.2.0"
+version: "0.2.1"
 maturity: 'draft'
 
 name: "Specimen"
@@ -23,18 +23,9 @@ ontology_classes:
 
 semantic_schemas:
   - id: "specimen/PMDCo"
-    version: "0.3.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/specimen-PMDCo-v0.3.0/schemas/specimen/PMDCo/specs/schema.oold.yaml"
+    version: "0.4.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/specimen-PMDCo-v0.4.0/schemas/specimen/PMDCo/specs/schema.oold.yaml"
     role: specimen_description
-
-relations:
-  - id: source
-    label: "Source"
-    description: "Semi-finished product (e.g. metal sheet) this specimen was cut or prepared from."
-    iri: "http://www.w3.org/ns/prov#wasDerivedFrom"
-    target_k_types: [semi-finished-product]
-    cardinality: "0..1"
-    required: false
 
 custom_properties:
   semantics_enabled: true

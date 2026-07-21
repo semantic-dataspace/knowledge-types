@@ -3,13 +3,13 @@
 A physical test piece prepared from a material for characterisation or mechanical testing.
 
 <table>
-<tr><td><strong>Version</strong></td><td><code>0.2.0</code></td></tr>
+<tr><td><strong>Version</strong></td><td><code>0.2.1</code></td></tr>
 <tr><td><strong>Inherits from</strong></td><td>—</td></tr>
 <tr><td><strong>Ontology</strong></td><td>
 <code>pmdco:Specimen</code>, <code>obi:Specimen</code>
 </td></tr>
 <tr><td><strong>Semantic schemas</strong></td><td>
-<code>specimen/PMDCo</code> v0.3.0
+<code>specimen/PMDCo</code> v0.4.0
 </td></tr>
 <tr><td><strong>Links to</strong></td><td>semi-finished-product (source)</td></tr>
 </table>

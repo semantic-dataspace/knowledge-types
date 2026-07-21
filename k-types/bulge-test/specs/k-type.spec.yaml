@@ -1,0 +1,33 @@
+format_version: "0.1"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/bulge-test-v0.1.1/k-types/bulge-test/specs/k-type.spec.yaml"
+
+id: bulge-test
+version: "0.1.1"
+maturity: 'draft'
+
+name: "Bulge Test"
+description: >
+  A hydraulic bulge test (Tiefungsversuch) that characterises the biaxial
+  flow behaviour of sheet metal by pressurising a clamped blank until it
+  bulges and fractures. Produces a biaxial stress-strain curve used to
+  calibrate material models for sheet forming simulations.
+
+synonyms:
+  - "hydraulic bulge test"
+  - "biaxial tensile test"
+  - "Tiefungsversuch"
+
+extends: ../characterization-process/specs/k-type.spec.yaml
+
+ontology_classes:
+  - iri: "http://purl.obolibrary.org/obo/OBI_0000070"
+    label: "assay"
+    ontology: OBI
+
+semantic_schemas:
+  - id: "characterization/generic/PMDCo"
+    version: "0.2.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/characterization-generic-PMDCo-v0.2.0/schemas/characterization/generic/PMDCo/specs/schema.oold.yaml"
+    role: measurement_results
+
+tags: [process, characterization, mechanical-testing, forming, bulge]

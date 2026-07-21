@@ -1,8 +1,8 @@
 format_version: "0.1"
-$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/measurement-device-v0.1.0/k-types/measurement-device/specs/k-type.spec.yaml"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/measurement-device-v0.1.1/k-types/measurement-device/specs/k-type.spec.yaml"
 
 id: measurement-device
-version: "0.1.0"
+version: "0.1.1"
 maturity: 'draft'
 
 name: "Measurement Device"
@@ -28,18 +28,9 @@ ontology_classes:
 
 semantic_schemas:
   - id: "measurement-device/PMDCo"
-    version: "0.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/measurement-device-PMDCo-v0.1.0/schemas/measurement-device/PMDCo/specs/schema.oold.yaml"
+    version: "0.2.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/measurement-device-PMDCo-v0.2.0/schemas/measurement-device/PMDCo/specs/schema.oold.yaml"
     role: device_description
-
-relations:
-  - id: responsible_organization
-    label: "Responsible organisation"
-    description: "Organisation that owns or is responsible for this device."
-    iri: "https://w3id.org/ORCHESTER/measurement-device/HasResponsibleOrganizationUnit"
-    target_k_types: [organization]
-    cardinality: "0..1"
-    required: false
 
 custom_properties:
   semantics_enabled: true

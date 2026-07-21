@@ -25,20 +25,4 @@ ontology_classes:
 context_member_types:
   - metal-sheet
 
-relations:
-  - id: made_of
-    label: "Material"
-    description: "Alloy or substance identity shared by all sheets in this batch."
-    iri: "https://schema.org/material"
-    target_k_types: [material]
-    cardinality: "0..1"
-    required: false
-  - id: supplier
-    label: "Supplier"
-    description: "Organisation that supplied this batch of sheets."
-    iri: "https://schema.org/supplier"
-    target_k_types: [organization]
-    cardinality: "0..1"
-    required: false
-
 tags: [batch, metal-sheet]
