@@ -25,8 +25,8 @@ ontology_classes:
 
 semantic_schemas:
   - id: "data-analysis/generic/PMDCo"
-    version: "0.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/data-analysis-generic-PMDCo-v0.1.0/schemas/data-analysis/generic/PMDCo/specs/schema.oold.yaml"
+    version: "0.1.2"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/kiran/schemas/data-analysis/generic/PMDCo/specs/schema.oold.yaml"
     role: data_analysis_step
 
 tags: [process, data, analysis]

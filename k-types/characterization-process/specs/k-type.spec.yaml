@@ -29,7 +29,7 @@ ontology_classes:
 
 semantic_schemas:
   - id: "characterization/generic/PMDCo"
-    version: "0.2.1"
+    version: "0.4.0"
     url: "https://github.com/semantic-dataspace/semantic-schemas/blob/kiran/schemas/characterization/generic/PMDCo/specs/schema.oold.yaml"
     role: measurement_step
 

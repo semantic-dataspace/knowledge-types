@@ -28,8 +28,8 @@ ontology_classes:
 
 semantic_schemas:
   - id: "measurement-device/PMDCo"
-    version: "0.2.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/measurement-device-PMDCo-v0.2.0/schemas/measurement-device/PMDCo/specs/schema.oold.yaml"
+    version: "0.2.1"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/kiran/schemas/measurement-device/PMDCo/specs/schema.oold.yaml"
     role: device_description
 
 custom_properties:

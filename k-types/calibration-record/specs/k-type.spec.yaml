@@ -1,0 +1,31 @@
+format_version: "0.1"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/calibration-record-v0.1.0/k-types/calibration-record/specs/k-type.spec.yaml"
+
+id: calibration-record
+version: "0.1.0"
+maturity: draft
+
+name: "Calibration Record"
+description: >
+  A record of a calibration event for a measurement instrument. Captures the
+  calibration type (temperature, sensitivity, TauR, load cell, etc.), validity
+  period, accuracy claims, and a link to the calibrated instrument. Used to
+  provide traceable calibration provenance for measurement KItems.
+
+synonyms:
+  - "calibration certificate"
+  - "instrument calibration"
+  - "calibration event"
+
+ontology_classes:
+  - iri: "http://purl.obolibrary.org/obo/OBI_0000070"
+    label: "assay"
+    ontology: OBI
+
+semantic_schemas:
+  - id: "calibration/generic/PMDCo"
+    version: "0.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/kiran/schemas/calibration/generic/PMDCo/specs/schema.oold.yaml"
+    role: calibration_record
+
+tags: [calibration, instrument, quality, traceability, measurement-device]

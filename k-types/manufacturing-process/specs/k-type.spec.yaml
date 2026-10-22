@@ -24,8 +24,8 @@ ontology_classes:
 
 semantic_schemas:
   - id: "manufacturing/generic/PMDCo"
-    version: "0.2.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/manufacturing-generic-PMDCo-v0.2.0/schemas/manufacturing/generic/PMDCo/specs/schema.oold.yaml"
+    version: "0.3.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/kiran/schemas/manufacturing/generic/PMDCo/specs/schema.oold.yaml"
     role: process_step
 
 custom_properties:

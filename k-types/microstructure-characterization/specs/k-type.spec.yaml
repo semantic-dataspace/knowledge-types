@@ -1,0 +1,41 @@
+format_version: "0.1"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/microstructure-characterization-v0.1.0/k-types/microstructure-characterization/specs/k-type.spec.yaml"
+
+id: microstructure-characterization
+version: "0.1.0"
+maturity: 'draft'
+
+name: "Microstructure Characterization"
+description: >
+  A characterization session that quantifies the microstructure of a material or specimen
+  using imaging or diffraction techniques (optical microscopy, SEM, TEM, EBSD, AFM, XRD).
+  Records technique metadata (magnification, accelerating voltage, analysed area, etching
+  method) and quantitative results such as grain size, phase fractions, precipitate
+  dimensions, number density, porosity, and texture index. Results follow the PMDCo
+  MeasurementDatum + ScalarValueSpecification pattern.
+
+synonyms:
+  - "microstructure analysis"
+  - "metallographic analysis"
+  - "grain size analysis"
+  - "phase analysis"
+  - "EBSD measurement"
+  - "SEM characterization"
+
+extends: ../characterization-process/specs/k-type.spec.yaml
+
+ontology_classes:
+  - iri: "http://purl.obolibrary.org/obo/OBI_0000070"
+    label: "Assay"
+    ontology: OBI
+  - iri: "https://w3id.org/emmo/domain/characterisation-methodology/chameo#CharacterisationExperiment"
+    label: "Characterisation Experiment"
+    ontology: CHAMEO
+
+semantic_schemas:
+  - id: "characterization/microstructure/PMDCo"
+    version: "0.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/kiran/schemas/characterization/microstructure/PMDCo/specs/schema.oold.yaml"
+    role: measurement_results
+
+tags: [process, characterization, microstructure, grain-size, phase-fraction, SEM, TEM, EBSD]

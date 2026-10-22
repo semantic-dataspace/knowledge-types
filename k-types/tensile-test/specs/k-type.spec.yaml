@@ -29,12 +29,12 @@ ontology_classes:
 
 semantic_schemas:
   - id: "characterization/tensile-test/TTO"
-    version: "0.2.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/tensile-test-TTO-v0.2.0/schemas/characterization/tensile-test/TTO/specs/schema.oold.yaml"
+    version: "0.3.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/kiran/schemas/characterization/tensile-test/TTO/specs/schema.oold.yaml"
     role: measurement_results
   - id: "characterization/tensile-test/PMDCo"
-    version: "0.3.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/tensile-test-PMDCo-v0.3.0/schemas/characterization/tensile-test/PMDCo/specs/schema.oold.yaml"
+    version: "0.4.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/kiran/schemas/characterization/tensile-test/PMDCo/specs/schema.oold.yaml"
     role: measurement_results
 
 # All relations are inherited from characterization-process:

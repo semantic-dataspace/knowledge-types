@@ -26,8 +26,8 @@ ontology_classes:
 
 semantic_schemas:
   - id: "expertise/VIVO"
-    version: "0.3.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/expertise-VIVO-v0.3.0/schemas/expertise/VIVO/specs/schema.oold.yaml"
+    version: "0.3.1"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/kiran/schemas/expertise/VIVO/specs/schema.oold.yaml"
     role: expertise_profile
 
 custom_properties:

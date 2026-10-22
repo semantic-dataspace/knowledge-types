@@ -22,12 +22,12 @@ ontology_classes:
 
 semantic_schemas:
   - id: "chemical-composition/PMDCo"
-    version: "1.0.0"
+    version: "0.3.0"
     url: "https://github.com/semantic-dataspace/semantic-schemas/blob/kiran/schemas/chemical-composition/PMDCo/specs/schema.oold.yaml"
     role: composition_record
   - id: "chemical-composition/BWMD"
-    version: "0.2.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/chemical-composition-BWMD-v0.2.0/schemas/chemical-composition/BWMD/specs/schema.oold.yaml"
+    version: "0.2.1"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/kiran/schemas/chemical-composition/BWMD/specs/schema.oold.yaml"
     role: composition_record
 
 tags: [material, composition]
