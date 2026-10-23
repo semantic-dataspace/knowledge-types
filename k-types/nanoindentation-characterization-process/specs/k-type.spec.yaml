@@ -1,0 +1,41 @@
+format_version: "0.1"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/nanoindentation-characterization-process-v0.1.0/k-types/nanoindentation-characterization-process/specs/k-type.spec.yaml"
+
+id: nanoindentation-characterization-process
+version: "0.1.0"
+maturity: 'draft'
+
+name: "Nanoindentation Characterization Process"
+description: >
+  A depth-sensing indentation characterization process (chameo:Nanoindentation) in which
+  a hard indenter tip is pressed into a material surface to measure mechanical properties
+  (hardness HIT, elastic modulus EIT) from the load-displacement curve.
+  Captures instrument identity, test protocol (control mode, indenter geometry, test
+  conditions), analysis method, and summary statistics across all indentations in the
+  session. Individual indentation datasets are linked as nanoindentation-dataset KItems.
+  Generic across instruments (Anton Paar, Bruker, Keysight, Hysitron, etc.) and control
+  modes (depth-controlled, load-controlled, constant strain rate, CSM).
+
+synonyms:
+  - "depth-sensing indentation"
+  - "instrumented indentation test"
+  - "nanoindentation measurement"
+  - "nanoindentation experiment"
+  - "IIT"
+  - "DSI"
+  - "Nanoindentation"
+
+extends: ../characterization-process/specs/k-type.spec.yaml
+
+ontology_classes:
+  - iri: "https://w3id.org/emmo/domain/characterisation-methodology/chameo#Nanoindentation"
+    label: "Nanoindentation"
+    ontology: CHAMEO
+
+semantic_schemas:
+  - id: "characterization/nanoindentation/PMDCo"
+    version: "0.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/kiran/schemas/characterization/nanoindentation/PMDCo/specs/schema.oold.yaml"
+    role: measurement_results
+
+tags: [process, characterization, mechanical-testing, nanoindentation, hardness, elastic-modulus, depth-sensing-indentation, ISO-14577, chameo, materials-science]

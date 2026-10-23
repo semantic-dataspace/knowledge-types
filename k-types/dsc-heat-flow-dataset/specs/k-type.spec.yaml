@@ -1,0 +1,40 @@
+format_version: "0.1"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/dsc-heat-flow-dataset-v0.1.1/k-types/dsc-heat-flow-dataset/specs/k-type.spec.yaml"
+
+id: dsc-heat-flow-dataset
+version: "0.1.1"
+maturity: 'draft'
+
+name: "DSC Heat Flow Dataset"
+description: >
+  Digital twin of a single DSC heat-flow measurement file (MTYPE=DSC). Stores scalar
+  characterization results (onset/peak temperature, enthalpy, etc.) as MeasurementDatum
+  nodes via the OO-LD semantic schema, and carries the raw heat-flow time-series
+  (Temperature vs DSC/(µV/mg)) as an attached CSV file. Links back to the parent
+  dsc-heat-flow-measurement process KItem and the measured specimen via DSMS
+  linked_kitems. For specific heat capacity measurements (MTYPE=CP) use cp-dataset.
+
+synonyms:
+  - "DSC heat flow dataset"
+  - "DSC time-series"
+  - "DSC heat flow measurement file"
+  - "Differential Scanning Calorimetry heat flow dataset"
+  - "heat flow curve"
+
+extends: ../dataset/specs/k-type.spec.yaml
+
+ontology_classes:
+  - iri: "https://w3id.org/dsms/DSCMeasurement/DSCHeatFlowMeasurement"
+    label: "DSC Heat Flow Measurement"
+    ontology: DSMS
+  - iri: "http://www.w3.org/ns/dcat#Dataset"
+    label: "Dataset"
+    ontology: DCAT
+
+semantic_schemas:
+  - id: "dataset/dsc/PMDCo"
+    version: "0.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/kiran/schemas/dataset/dsc/PMDCo/specs/schema.oold.yaml"
+    role: measurement_results
+
+tags: [dataset, thermal-analysis, time-series, dsc, heat-flow, phase-transition, enthalpy, specific-heat-capacity, netzsch, characterization, materials-science, digital-twin]
