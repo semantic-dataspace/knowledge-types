@@ -23,6 +23,12 @@ ontology_classes:
     label: "Material"
     ontology: PMDCo
 
+semantic_schemas:
+  - id: "material/PMDCo"
+    version: "0.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/kiran/schemas/material/PMDCo/specs/schema.oold.yaml"
+    role: material
+
 kv_properties:
   enabled: true
   semantic_mapping: true

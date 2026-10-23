@@ -15,6 +15,9 @@ graph TD
   characterization-process --> tensile-test
   characterization-process --> bulge-test
   characterization-process --> nakajima-test
+  characterization-process --> nanoindentation
+  characterization-process --> microstructure-characterization
+  dataset --> nanoindentation-dataset
   batch --> specimen-batch
   batch --> metal-sheet-batch
   semi-finished-product --> metal-sheet
@@ -97,5 +100,8 @@ graph TD
 | [semi-finished-product](k-types/semi-finished-product/) | Semi-Finished Product | | BFO | | | semi-finished-product |
 | [specimen](k-types/specimen/) | Specimen | | OBI | specimen/PMDCo v0.4.0 | | specimen |
 | [specimen-batch](k-types/specimen-batch/) | Specimen Batch | batch | PMDCo | | | batch, specimen |
+| [microstructure-characterization](k-types/microstructure-characterization/) | Microstructure Characterization | characterization-process | OBI, CHAMEO | characterization/microstructure/PMDCo v0.1.0 | specimen/material (in, inherited), dataset (out, inherited), expert (inherited), measurement-device (inherited) | process, characterization, microstructure, grain-size, phase-fraction, SEM, TEM, EBSD |
+| [nanoindentation](k-types/nanoindentation/) | Nanoindentation Experiment | characterization-process | CHAMEO, OBI | characterization/nanoindentation/PMDCo v0.2.0 | specimen/material (in, inherited), nanoindentation-dataset (out, inherited), expert (inherited), measurement-device (inherited) | process, characterization, mechanical-testing, nanoindentation, hardness |
+| [nanoindentation-dataset](k-types/nanoindentation-dataset/) | Nanoindentation Dataset | dataset | DCAT | dataset/nanoindentation/PMDCo v0.1.0 | | data, dataset, nanoindentation |
 | [tensile-test](k-types/tensile-test/) | Tensile Test | characterization-process | SteelPO, TTO | characterization/tensile-test/TTO v0.2.0, characterization/tensile-test/PMDCo v0.3.0 | specimen/material (in, inherited), specimen/dataset (out, inherited), expert (inherited), measurement-device (inherited) | process, characterization, mechanical-testing |
 | [use-case](k-types/use-case/) | Use Case | process | OBI | | | use-case, workflow, campaign |
