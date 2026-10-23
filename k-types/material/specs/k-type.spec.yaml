@@ -1,8 +1,8 @@
 format_version: "0.1"
-$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/material-v0.1.1/k-types/material/specs/k-type.spec.yaml"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/material-v0.1.2/k-types/material/specs/k-type.spec.yaml"
 
 id: material
-version: "0.1.1"
+version: "0.1.2"
 maturity: 'draft'
 
 name: "Material"
@@ -26,7 +26,7 @@ ontology_classes:
 semantic_schemas:
   - id: "material/PMDCo"
     version: "0.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/tree/kiran/schemas/material/PMDCo/specs/schema.oold.yaml"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/kiran/schemas/material/PMDCo/specs/schema.oold.yaml"
     role: material
 
 kv_properties:

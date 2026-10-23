@@ -1,5 +1,14 @@
 # Changelog — Material
 
+## [0.1.2] — 2026-10-23
+
+### Fixed
+
+- Corrected semantic schema URL from `/tree/` to `/blob/` GitHub format so the SDK can
+  resolve the raw YAML content correctly.
+
+---
+
 ## [0.1.1] — 2026-06-03
 
 ### Fixed

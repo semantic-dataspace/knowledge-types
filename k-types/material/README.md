@@ -7,7 +7,7 @@ For a traceable physical piece use [semi-finished-product](../semi-finished-prod
 or one of its subtypes.
 
 <table>
-<tr><td><strong>Version</strong></td><td><code>0.1.1</code></td></tr>
+<tr><td><strong>Version</strong></td><td><code>0.1.2</code></td></tr>
 <tr><td><strong>Inherits from</strong></td><td>—</td></tr>
 <tr><td><strong>Ontology</strong></td><td><code>pmdco:Material</code>, <code>emmo:Material</code></td></tr>
 <tr><td><strong>Semantic schemas</strong></td><td>—</td></tr>
