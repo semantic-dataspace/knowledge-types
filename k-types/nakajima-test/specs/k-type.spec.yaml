@@ -1,8 +1,8 @@
 format_version: "0.1"
-$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/nakajima-test-v0.1.1/k-types/nakajima-test/specs/k-type.spec.yaml"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/nakajima-test-v0.1.2/k-types/nakajima-test/specs/k-type.spec.yaml"
 
 id: nakajima-test
-version: "0.1.1"
+version: "0.1.2"
 maturity: 'draft'
 
 name: "Nakajima Test"

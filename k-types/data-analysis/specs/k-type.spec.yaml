@@ -1,8 +1,8 @@
 format_version: "0.1"
-$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/data-analysis-v0.1.0/k-types/data-analysis/specs/k-type.spec.yaml"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/data-analysis-v0.1.1/k-types/data-analysis/specs/k-type.spec.yaml"
 
 id: data-analysis
-version: "0.1.0"
+version: "0.1.1"
 maturity: 'draft'
 
 name: "Data Analysis"

@@ -1,8 +1,8 @@
 format_version: "0.1"
-$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/dataset-v0.1.0/k-types/dataset/specs/k-type.spec.yaml"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/dataset-v0.1.1/k-types/dataset/specs/k-type.spec.yaml"
 
 id: dataset
-version: "0.1.0"
+version: "0.1.1"
 maturity: 'draft'
 
 name: "Dataset"

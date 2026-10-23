@@ -1,8 +1,8 @@
 format_version: "0.1"
-$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/manufacturing-process-v0.1.1/k-types/manufacturing-process/specs/k-type.spec.yaml"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/manufacturing-process-v0.1.2/k-types/manufacturing-process/specs/k-type.spec.yaml"
 
 id: manufacturing-process
-version: "0.1.1"
+version: "0.1.2"
 maturity: 'draft'
 
 name: "Manufacturing Process"

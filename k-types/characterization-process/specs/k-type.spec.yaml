@@ -1,8 +1,8 @@
 format_version: "0.1"
-$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/characterization-process-v0.1.1/k-types/characterization-process/specs/k-type.spec.yaml"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/characterization-process-v0.1.2/k-types/characterization-process/specs/k-type.spec.yaml"
 
 id: characterization-process
-version: "0.1.1"
+version: "0.1.2"
 maturity: 'draft'
 
 name: "Characterization Process"
