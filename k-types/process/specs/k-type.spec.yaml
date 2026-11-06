@@ -26,6 +26,8 @@ kv_properties:
 custom_properties:
   semantics_enabled: true
   sections_enabled: false
+  class_mapping:
+    - "https://w3id.org/emmo#EMMO_43e9a05d_98af_41b4_92f6_00f79a09bfce"
   sections:
     - id: section-process-base
       name: "Basic Information"
