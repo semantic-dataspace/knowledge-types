@@ -3,7 +3,7 @@ $id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/organ
 
 id: organization
 version: "0.1.0"
-maturity: 'draft'
+maturity: "draft"
 
 name: "Organization"
 description: >
@@ -26,31 +26,57 @@ ontology_classes:
     label: "Organization"
     ontology: schema.org
 
+class_mapping:
+  - "https://w3id.org/emmo#EMMO_c0f72631_d7c2_434c_9c26_5c44123df682"
+
 custom_properties:
   semantics_enabled: true
   sections_enabled: false
+  class_mapping:
+    - "http://xmlns.com/foaf/0.1/Organization"
   sections:
-    - id: section-org-info
-      name: "Organisation Information"
+    - id: id21866f42d5176
+      name: "Untitled Section"
       inputs:
-        - id: input-org-name
+        - id: id4d61120f8538b
           label: "Name of the Organisation"
           widget: Text
-          required: true
+          required: false
           relation_mapping:
             iri: "http://xmlns.com/foaf/0.1/name"
             type: data_property
-        - id: input-org-url
+        - id: id2af8ad6c4bb5a
+          label: "Sub Organisation of"
+          widget: Knowledge item
+          required: false
+          hint: "Please select the upper organisation"
+          multiple_selection: false
+          knowledge_type:
+            - organization
+          relation_mapping:
+            iri: "http://www.w3.org/ns/org#subOrganizationOf"
+            type: data_property
+        - id: id5880a22a80ecf
           label: "URL of the webpage"
           widget: Text
           required: false
           relation_mapping:
             iri: "http://www.w3.org/ns/dcat#accessURL"
             type: data_property
-        - id: input-org-city
+        - id: id3e32c796f00c7
           label: "City"
           widget: Text
           required: false
+          relation_mapping:
+            iri: "http://www.w3.org/ns/org#location"
+            type: data_property
+        - id: id5597c3fd52603
+          label: "Address"
+          widget: Knowledge item
+          required: false
+          multiple_selection: false
+          knowledge_type:
+            - address
           relation_mapping:
             iri: "http://www.w3.org/ns/org#location"
             type: data_property
