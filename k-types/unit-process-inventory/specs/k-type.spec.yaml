@@ -1,0 +1,41 @@
+format_version: "0.1"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/unit-process-inventory-v0.1.0/k-types/unit-process-inventory/specs/k-type.spec.yaml"
+
+id: unit-process-inventory
+version: "0.1.0"
+maturity: 'draft'
+
+name:
+  en: "Unit Process Inventory (LCI)"
+  de: "Sachbilanz Einheitsprozess"
+description: >
+  Life cycle inventory dataset of one unit process: all input and output flows
+  quantified per reference flow, technology parameters and data provenance.
+  It describes a manufacturing-process KItem; it is not the process itself.
+
+synonyms:
+  en: ["LCI dataset", "unit process dataset", "UPLCI"]
+  de: ["Sachbilanzdatensatz", "LCI-Datensatz"]
+
+ontology_classes:
+  - iri: "https://w3id.org/dsms/uplci#UnitProcessInventory"
+    label: "Unit Process Inventory"
+    ontology: DSMS-UPLCI
+  - iri: "http://www.w3.org/ns/dcat#Dataset"
+    label: "Dataset"
+    ontology: DCAT
+  - iri: "http://purl.obolibrary.org/obo/IAO_0000030"
+    label: "Information Content Entity"
+    ontology: IAO
+
+semantic_schemas:
+  - id: "life-cycle-assessment/unit-process-inventory/PMDCo"
+    version: "0.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/life-cycle-assessment-unit-process-inventory-PMDCo-v0.1.0/schemas/life-cycle-assessment/unit-process-inventory/PMDCo/specs/schema.oold.yaml"
+    role: dataset
+
+kv_properties:
+  enabled: true
+  semantic_mapping: true
+
+tags: [lca, life-cycle-inventory, dataset, sustainability]

@@ -1,0 +1,37 @@
+format_version: "0.1"
+$id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/lca-assessment-v0.1.0/k-types/lca-assessment/specs/k-type.spec.yaml"
+
+id: lca-assessment
+version: "0.1.0"
+maturity: 'draft'
+
+name:
+  en: "LCA Assessment"
+  de: "Ökobilanz-Auswertung"
+description: >
+  One evaluation of an LCA product system by a tool or service (e.g. MPPM):
+  background database and impact method used, recommended pathway and
+  indicator results (GWP, EBIT, …).
+
+synonyms:
+  en: ["LCA evaluation", "LCIA result", "sustainability evaluation"]
+
+ontology_classes:
+  - iri: "https://w3id.org/dsms/uplci#LifeCycleAssessmentRun"
+    label: "Life Cycle Assessment Run"
+    ontology: DSMS-UPLCI
+  - iri: "http://purl.obolibrary.org/obo/OBI_0200000"
+    label: "Data Transformation"
+    ontology: OBI
+
+semantic_schemas:
+  - id: "life-cycle-assessment/assessment/PMDCo"
+    version: "0.1.0"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/life-cycle-assessment-assessment-PMDCo-v0.1.0/schemas/life-cycle-assessment/assessment/PMDCo/specs/schema.oold.yaml"
+    role: process_step
+
+kv_properties:
+  enabled: true
+  semantic_mapping: true
+
+tags: [lca, assessment, data-analysis, sustainability]
