@@ -12,16 +12,17 @@ context_member_types:
   - material
   - lca-assessment
 
-name:
-  en: "LCA Product System"
-  de: "Produktsystem (Ökobilanz)"
+name: "LCA Product System"
 description: >
   A process chain modelled for life cycle assessment: the linked unit process
   inventories that deliver a functional unit, with system boundary and
   background database. Acts as context for its inventories, processes and results.
 
 synonyms:
-  en: ["process chain (LCA)", "LCA model", "life cycle inventory chain"]
+  - "process chain (LCA)"
+  - "LCA model"
+  - "life cycle inventory chain"
+  - "Produktsystem"
 
 ontology_classes:
   - iri: "https://w3id.org/dsms/uplci#ProductSystem"
@@ -34,7 +35,7 @@ ontology_classes:
 semantic_schemas:
   - id: "life-cycle-assessment/product-system/PMDCo"
     version: "0.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/life-cycle-assessment-product-system-PMDCo-v0.1.0/schemas/life-cycle-assessment/product-system/PMDCo/specs/schema.oold.yaml"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/kiran/schemas/life-cycle-assessment/product-system/PMDCo/specs/schema.oold.yaml"
     role: model
 
 kv_properties:

@@ -7,40 +7,30 @@ A research or engineering project, such as a funded research initiative, collabo
 <tr><td><strong>Inherits from</strong></td><td>—</td></tr>
 <tr><td><strong>Ontology</strong></td><td><code>vivo:Project</code>, <code>schema:ResearchProject</code></td></tr>
 <tr><td><strong>Semantic schemas</strong></td><td>—</td></tr>
-<tr><td><strong>Links to</strong></td><td>expert (coordinator, participants), organization (partner organisations, funder), document (publications)</td></tr>
+<tr><td><strong>Links to</strong></td><td><a href="../expert/">expert</a> (members), <a href="../organization/">organization</a>, <a href="../dataset/">dataset</a></td></tr>
 </table>
 
 ## What it defines
 
-### Custom properties
+### Custom properties — Fundamental information
 
 | Field | Widget | Required | Predicate |
 |---|---|---|---|
-| Project homepage | Text | no | `schema:url` |
-| Start date | Date | no | `schema:startDate` |
-| End date | Date | no | `schema:endDate` |
-| Grant / project ID | Text | no | `schema:identifier` |
-| Funding programme | Text | no | `dcterms:isPartOf` |
-| Call / programme URL | Text | no | `dcat:accessURL` |
+| Project short name | Text | no | `steel:hasProjectName_Object` |
+| Project name | Text | no | `steel:hasProjectName` |
+| Organisation | Knowledge item (`organization`) | no | `org:organization` |
+| Project number | Text | no | `steel:hasProjectNumber` |
+| Project members | Knowledge item (`expert`) | no | `agrelon:isMemberOf` |
+| Webpage of the project | Text | no | `emmo:EMMO_ac852bf0…` |
 
-### Relations
+### Custom properties — Project related data
 
-| Relation | Target | Cardinality | Predicate |
+| Field | Widget | Required | Predicate |
 |---|---|---|---|
-| Coordinator / PI | [expert](../expert/) | 0..1 | `vivo:pi` |
-| Participants | [expert](../expert/) | 0..n | `schema:participant` |
-| Partner organisations | [organization](../organization/) | 0..n | `org:hasMember` |
-| Funder | [organization](../organization/) | 0..n | `schema:funder` |
-| Publications | [document](../document/) | 0..n | `schema:hasPart` |
+| Dataset | Knowledge item (`dataset`) | no | `steel:related` |
+| Dataset catalog | Knowledge item | no | `steel:related` |
 
 ## Context anchor
 
 `context: true`: project instances act as context anchors; k-items can be registered
 as members to scope graph views and queries to a specific project.
-
-## Notes
-
-- `Grant / project ID` holds the funder-assigned number (e.g. `101058682` for EC, `03XP0337A` for BMBF).
-- `Funding programme` is free text naming the programme (e.g. `Horizon Europe`, `BMBF`, `DFG`).
-- `Call / programme URL` links to the project's entry on the funder's portal (e.g. CORDIS).
-- Publications are linked as [document](../document/) k-items rather than embedded records.

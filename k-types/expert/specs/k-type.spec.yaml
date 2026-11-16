@@ -3,7 +3,7 @@ $id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/exper
 
 id: expert
 version: "0.1.2"
-maturity: 'draft'
+maturity: "draft"
 
 name: "Expert"
 description: >
@@ -33,16 +33,133 @@ semantic_schemas:
 custom_properties:
   semantics_enabled: true
   sections_enabled: true
+  class_mapping:
+    - "http://xmlns.com/foaf/0.1/Person"
   sections:
-    - id: section-expert-expertise
+    - id: id01d808779f18d
+      name: "General information about the Expert"
+      inputs:
+        - id: id73014ceccdf35
+          label: "First Name"
+          widget: Text
+          required: false
+          relation_mapping:
+            iri: "http://xmlns.com/foaf/0.1/firstName"
+            type: data_property
+        - id: ide3e3058da9784
+          label: "Last name"
+          widget: Text
+          required: false
+          relation_mapping:
+            iri: "http://xmlns.com/foaf/0.1/lastName"
+            type: data_property
+        - id: id220e33fbd6ce1
+          label: "Employer"
+          widget: Knowledge item
+          required: false
+          multiple_selection: true
+          knowledge_type:
+            - organization
+          relation_mapping:
+            iri: "https://d-nb.info/standards/elementset/agrelon#hasEmployer"
+            type: object_property
+            class_iri: "https://w3id.org/emmo#EMMO_c0f72631_d7c2_434c_9c26_5c44123df682"
+        - id: id4360d4bc4ab02
+          label: "Department"
+          widget: Knowledge item
+          required: false
+          hint: "Select the "
+          multiple_selection: false
+          knowledge_type:
+            - organization
+          relation_mapping:
+            iri: "http://www.w3.org/ns/org#memberOf"
+            type: property
+            class_iri: "http://www.w3.org/ns/org#OrganizationalUnit"
+        - id: id693ce596955fb
+          label: "Experts you know"
+          widget: Knowledge item
+          required: false
+          multiple_selection: true
+          knowledge_type:
+            - expert
+          relation_mapping:
+            iri: "http://xmlns.com/foaf/0.1/knows"
+            type: object_property
+            class_iri: "https://d-nb.info/standards/elementset/gnd#Person"
+    - id: id9ad5da56ad5dd
       name: "Expertise"
       inputs:
-        - id: input-field-of-study
+        - id: idc90df1ddeb336
+          label: "Expertise in materials"
+          widget: Knowledge item
+          required: false
+          multiple_selection: true
+          knowledge_type:
+            - engineered-material
+          relation_mapping:
+            iri: "https://d-nb.info/standards/elementset/gnd#topic"
+            type: property
+        - id: id7aba01bb91426
+          label: "Expertise in material modelling"
+          widget: Knowledge item
+          required: false
+          multiple_selection: true
+          knowledge_type:
+            - material-model
+          relation_mapping:
+            iri: "https://d-nb.info/standards/elementset/gnd#topic"
+            type: property
+        - id: id47391ebd4d64
+          label: "Expertise in measurement devices"
+          widget: Knowledge item
+          required: false
+          multiple_selection: true
+          knowledge_type:
+            - measurement-device
+          relation_mapping:
+            iri: "https://w3id.org/ORCHESTER/measurement-device/HasMeasurementDeviceName"
+            type: data_property
+        - id: id904aee319ff3
+          label: "Expertise in production devices"
+          widget: Knowledge item
+          required: false
+          multiple_selection: true
+          knowledge_type:
+            - production-device
+          relation_mapping:
+            iri: "https://w3id.org/ORCHESTER/HasExpertise"
+            type: object_property
+        - id: iddad9e6c22fcd78
+          label: "Expertise in application fields"
+          widget: Knowledge item
+          required: false
+          multiple_selection: true
+          knowledge_type:
+            - field-of-application
+          relation_mapping:
+            iri: "https://w3id.org/ORCHESTER/HasExpertise"
+            type: object_property
+        - id: id47e03d89cbd348
+          label: "Expertise in Methods"
+          widget: Knowledge item
+          required: false
+          multiple_selection: true
+          knowledge_type:
+            - method-material-perspective
+          relation_mapping:
+            iri: "https://w3id.org/ORCHESTER/HasExpertise"
+            type: object_property
+    - id: id69dc30cd5bd52
+      name: "Education"
+      inputs:
+        - id: id2fe41d8056068
           label: "Education or Field of Study"
           widget: Text
           required: false
           relation_mapping:
             iri: "https://d-nb.info/standards/elementset/gnd#fieldOfStudy"
-            type: data_property
+            type: object_property
+            class_iri: "https://d-nb.info/standards/elementset/gnd#Gods"
 
 tags: [agent, person, expert]

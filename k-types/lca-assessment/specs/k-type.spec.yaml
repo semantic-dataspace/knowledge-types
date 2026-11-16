@@ -5,16 +5,17 @@ id: lca-assessment
 version: "0.1.0"
 maturity: 'draft'
 
-name:
-  en: "LCA Assessment"
-  de: "Ökobilanz-Auswertung"
+name: "LCA Assessment"
 description: >
   One evaluation of an LCA product system by a tool or service (e.g. MPPM):
   background database and impact method used, recommended pathway and
   indicator results (GWP, EBIT, …).
 
 synonyms:
-  en: ["LCA evaluation", "LCIA result", "sustainability evaluation"]
+  - "LCA evaluation"
+  - "LCIA result"
+  - "sustainability evaluation"
+  - "Ökobilanz-Auswertung"
 
 ontology_classes:
   - iri: "https://w3id.org/dsms/uplci#LifeCycleAssessmentRun"
@@ -27,7 +28,7 @@ ontology_classes:
 semantic_schemas:
   - id: "life-cycle-assessment/assessment/PMDCo"
     version: "0.1.0"
-    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/life-cycle-assessment-assessment-PMDCo-v0.1.0/schemas/life-cycle-assessment/assessment/PMDCo/specs/schema.oold.yaml"
+    url: "https://github.com/semantic-dataspace/semantic-schemas/blob/kiran/schemas/life-cycle-assessment/assessment/PMDCo/specs/schema.oold.yaml"
     role: process_step
 
 kv_properties:

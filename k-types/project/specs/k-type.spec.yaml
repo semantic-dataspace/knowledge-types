@@ -17,6 +17,9 @@ synonyms:
   - "research programme"
   - "initiative"
 
+class_mapping:
+  - "https://w3id.org/pmd/co/Project"
+
 ontology_classes:
   - iri: "http://vivoweb.org/ontology/core#Project"
     label: "Project"
@@ -29,57 +32,82 @@ custom_properties:
   semantics_enabled: true
   sections_enabled: true
   sections:
-    - id: section-project-info
-      name: "Project"
+    - id: id4cdf930805703
+      name: "Fundamental information"
       inputs:
-        - id: input-project-url
-          label: "Project homepage"
+        - id: id1475863a6734b
+          label: "Project short name"
+          widget: Text
+          required: false
+          hint: "e.g. SPP-DaMic-P4"
+          relation_mapping:
+            iri: "https://w3id.org/steel/ProcessOntology/hasProjectName_Object"
+            type: object_property
+            class_iri: "https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/domain#BWMD_00394"
+        - id: id0e2567e83ee82
+          label: "Project name"
+          widget: Text
+          required: false
+          hint: "Full title of the project"
+          relation_mapping:
+            iri: "https://w3id.org/steel/ProcessOntology/hasProjectName"
+            type: data_property
+        - id: idb13d750ebf668
+          label: "Organisation"
+          widget: Knowledge item
+          required: false
+          multiple_selection: true
+          knowledge_type:
+            - organization
+          relation_mapping:
+            iri: "http://www.w3.org/ns/org#organization"
+            type: property
+        - id: idda331a2c485b6
+          label: "Project number"
+          widget: Text
+          required: false
+          hint: "e.g. 038282 (BMBF) or 101058682 (EC)"
+          relation_mapping:
+            iri: "https://w3id.org/steel/ProcessOntology/hasProjectNumber"
+            type: data_property
+        - id: idad6f75e0569f8
+          label: "Project members"
+          widget: Knowledge item
+          required: false
+          multiple_selection: true
+          knowledge_type:
+            - expert
+          relation_mapping:
+            iri: "https://d-nb.info/standards/elementset/agrelon#isMemberOf"
+            type: property
+        - id: idf533e1a7c76d8
+          label: "Webpage of the project"
           widget: Text
           required: false
           hint: "e.g. https://my-project.eu"
           relation_mapping:
-            iri: "https://schema.org/url"
+            iri: "https://w3id.org/emmo#EMMO_ac852bf0_3251_4d6b_9e57_acbfcb5e7e08"
             type: data_property
-        - id: input-project-start
-          label: "Start date"
-          widget: Date
-          required: false
-          relation_mapping:
-            iri: "https://schema.org/startDate"
-            type: data_property
-        - id: input-project-end
-          label: "End date"
-          widget: Date
-          required: false
-          relation_mapping:
-            iri: "https://schema.org/endDate"
-            type: data_property
-    - id: section-project-funding
-      name: "Funding"
+    - id: id1b9da0f945fda
+      name: "Project related data"
       inputs:
-        - id: input-grant-id
-          label: "Grant / project ID"
-          widget: Text
+        - id: ida9b609cef97dd
+          label: "Dataset"
+          widget: Knowledge item
           required: false
-          hint: "e.g. 101058682 (EC) or 03XP0337A (BMBF)"
+          multiple_selection: true
+          knowledge_type:
+            - dataset
           relation_mapping:
-            iri: "https://schema.org/identifier"
-            type: data_property
-        - id: input-funding-program
-          label: "Funding programme"
-          widget: Text
+            iri: "https://w3id.org/steel/ProcessOntology/related"
+            type: property
+        - id: idf5a031991b475
+          label: "Dataset catalog"
+          widget: Knowledge item
           required: false
-          hint: "e.g. Horizon Europe, BMBF, DFG"
+          multiple_selection: true
           relation_mapping:
-            iri: "http://purl.org/dc/terms/isPartOf"
-            type: data_property
-        - id: input-funding-call-url
-          label: "Call / programme URL"
-          widget: Text
-          required: false
-          hint: "e.g. https://cordis.europa.eu/project/id/101058682"
-          relation_mapping:
-            iri: "http://www.w3.org/ns/dcat#accessURL"
-            type: data_property
+            iri: "https://w3id.org/steel/ProcessOntology/related"
+            type: property
 
 tags: [project, research, programme]

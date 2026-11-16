@@ -2,7 +2,7 @@ format_version: "0.1"
 $id: "https://raw.githubusercontent.com/semantic-dataspace/knowledge-types/measurement-device-v0.1.2/k-types/measurement-device/specs/k-type.spec.yaml"
 
 id: measurement-device
-version: "0.1.2"
+version: "0.1.1"
 maturity: 'draft'
 
 name: "Measurement Device"
@@ -32,60 +32,82 @@ semantic_schemas:
     url: "https://github.com/semantic-dataspace/semantic-schemas/blob/kiran/schemas/measurement-device/PMDCo/specs/schema.oold.yaml"
     role: device_description
 
+class_mapping:
+  - "https://w3id.org/ORCHESTER/MeasurementDevice"
+
 custom_properties:
   semantics_enabled: true
   sections_enabled: false
   sections:
-    - id: section-device-info
-      name: "Device Information"
+    - id: id23f26e1aec6e
+      name: "Untitled Section"
       inputs:
-        - id: input-device-name
+        - id: id4771ba047219e
           label: "Name of measurement device"
           widget: Text
-          required: true
+          required: false
+          hint: "Please add the name of the measurement device"
           relation_mapping:
             iri: "https://w3id.org/ORCHESTER/measurement-device/HasMeasurementDeviceName"
             type: data_property
-        - id: input-device-manufacturer
+            class_iri: "https://w3id.org/ORCHESTER/measurement-device/MeasurementDeviceName"
+        - id: id3d095d631a156
           label: "Manufacturer"
           widget: Text
           required: false
+          hint: "Please add the name of the manufacturer"
           relation_mapping:
             iri: "https://w3id.org/ORCHESTER/measurement-device/HasManufacturer"
             type: data_property
-        - id: input-device-type
-          label: "Device type"
+        - id: id4584da4ce4bc9
+          label: "Measurement device type"
           widget: Text
           required: false
-          hint: "e.g. Universal testing machine, SEM, XRD"
+          hint: "Please add the measurement type of the device, e.g. microscope"
           relation_mapping:
             iri: "https://w3id.org/ORCHESTER/measurement-device/MeasurementDeviceType"
             type: data_property
-        - id: input-device-serial
+        - id: id071732bc59fed
           label: "Serial number"
           widget: Text
           required: false
+          hint: "Please add the serial number"
           relation_mapping:
             iri: "https://w3id.org/ORCHESTER/measurement-device/HasSerialNumber"
             type: data_property
-        - id: input-device-inventory
-          label: "Inventory number"
-          widget: Text
+        - id: id7550e1c6439dd
+          label: "Responsible organization for the device"
+          widget: Knowledge item
           required: false
+          hint: "Please add the responsible department of the organisation"
+          multiple_selection: false
+          knowledge_type:
+            - organization
           relation_mapping:
-            iri: "https://w3id.org/ORCHESTER/measurement-device/HasInventoryNumber"
-            type: data_property
-        - id: input-device-room
+            iri: "https://w3id.org/ORCHESTER/measurement-device/HasResponsibleOrganizationUnit"
+            type: object_property
+            class_iri: "https://w3id.org/emmo#EMMO_c0f72631_d7c2_434c_9c26_5c44123df682"
+        - id: id2095e14118a78
           label: "Room number"
           widget: Text
           required: false
+          hint: "Please add the room number of the device"
           relation_mapping:
             iri: "https://w3id.org/ORCHESTER/measurement-device/HasRoomNumber"
             type: data_property
-        - id: input-device-range
+        - id: idcce5f8dfb7778
+          label: "Inventory number"
+          widget: Text
+          required: false
+          hint: "please add the sigma inventory number"
+          relation_mapping:
+            iri: "https://w3id.org/ORCHESTER/measurement-device/HasInventoryNumber"
+            type: data_property
+        - id: id3998befe78c2c
           label: "Measurement range"
           widget: Textarea
           required: false
+          hint: "Please add relevant information about the measurement range"
           relation_mapping:
             iri: "https://w3id.org/ORCHESTER/measurement-device/HasMeasurementRange"
             type: data_property
